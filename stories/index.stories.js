@@ -6,8 +6,7 @@ import { linkTo } from '@storybook/addon-links';
 
 import { Button, Welcome } from '@storybook/react/demo';
 
-import App from '../src/App'
-import Sample from '../src/Sample'
+import './sample'
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')}/>);
 
@@ -25,9 +24,3 @@ storiesOf('Button', module)
       Fire SAMPLE_ACTION
     </Button>
   ));
-
-storiesOf('Create React App', module).add('index', () => <App/>);
-
-storiesOf('sample', module)
-  .add('sample component', () => <Button>sample button</Button>)
-    .add('sample text', () => <Sample/>);
