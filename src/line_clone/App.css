@@ -1,0 +1,25 @@
+.Main {
+
+}
+.ChatRoom {
+    display: flex;
+    width: 500px;
+}
+.ChatRoom--Img {
+
+}
+
+.ChatRoom--Containts{
+
+}
+
+.ChatRoom--Containts_Wrapper {
+    display: flex;
+}
+
+.ChatRoom--Containts_RoomName{
+
+}
+.ChatRoom--Containts_Time{
+    margin-left: auto;
+}

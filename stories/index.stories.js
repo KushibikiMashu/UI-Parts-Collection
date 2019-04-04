@@ -10,6 +10,7 @@ import './index.tailwind.css'
 
 import './sample'
 import './tailwind'
+import './line_clone'
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')}/>);
 
