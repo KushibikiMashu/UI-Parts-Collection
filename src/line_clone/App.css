@@ -1,25 +1,45 @@
-.Main {
+.Main {}
 
-}
 .ChatRoom {
     display: flex;
-    width: 500px;
+    width: 400px;
+    height: 80px;
+    margin: 10px 5px;
+    border: #1a202c 1px solid;
 }
 .ChatRoom--Img {
-
-}
-
-.ChatRoom--Containts{
-
-}
-
-.ChatRoom--Containts_Wrapper {
+    width: 80px;
     display: flex;
+    justify-content: center;
+    /* 丸くする　radius*/
 }
 
-.ChatRoom--Containts_RoomName{
 
+.ChatRoom--Containts {
+    display: flex;
+    padding: 8px 0;
 }
+
+.ChatRoom--Containts_Left {
+    width: 260px;
+    font-size: 12px;
+}
+
+.ChatRoom--Containts_RoomName{}
+
+.ChatRoom--Containts_Description{}
+
+
+.ChatRoom--Containts_Right{
+    width: 80px;
+    padding-right: 8px;
+    font-size: 12px;
+}
+
 .ChatRoom--Containts_Time{
-    margin-left: auto;
+    text-align: right;
+}
+
+.ChatRoom--Containts_Badge{
+    text-align: right;
 }
