@@ -1,7 +1,15 @@
 import React from "react";
 import './RoomItem.css'
 
-export default function ChatRoomItem({roomName, description, time, newPostCount, img}) {
+type Props = {
+    roomName: string,
+    description: string,
+    time: string,
+    newPostCount: string,
+    img: string,
+}
+
+export default function ChatRoomItem({roomName, description, time, newPostCount, img}: Props) {
   return (
     <div className="RoomItem">
       <div className="RoomItem__Left">

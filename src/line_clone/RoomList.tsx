@@ -1,6 +1,6 @@
 import React from "react";
 import ChatRoomItem from './RoomItem'
-import { roomItems } from './data.js'
+import { roomItems } from './data'
 
 export default function ChatRoomList() {
   const chatRooms = roomItems.map(item => <ChatRoomItem {...item}/>)

@@ -6,7 +6,7 @@ import RoomList from '../../src/line_clone/RoomList'
 import RoomItem from '../../src/line_clone/RoomItem'
 import MessageList from '../../src/line_clone/MessageList'
 import Message from '../../src/line_clone/Message'
-import {roomItems, messageItems} from '../../src/line_clone/data.js'
+import {roomItems, messageItems} from '../../src/line_clone/data'
 
 storiesOf('LINE CLONE', module)
   .add('App', () => <App/>)

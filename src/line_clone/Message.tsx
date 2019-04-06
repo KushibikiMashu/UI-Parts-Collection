@@ -1,7 +1,14 @@
 import React from "react";
 import './Message.css'
 
-export default function Message({userName, body, time, image}) {
+type Props = {
+    userName: string,
+    body: string,
+    time: string,
+    image: string,
+}
+
+export default function Message({userName, body, time, image}: Props) {
   return (
     <div className="Message">
       <div className="Message__Left">

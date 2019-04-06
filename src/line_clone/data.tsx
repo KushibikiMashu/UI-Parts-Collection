@@ -1,8 +1,9 @@
-import reactLogo from './react-logo.svg'
-import vueLogo from './vue-logo.png'
-import angularLogo from './angular-logo.svg'
+import {roomItem, messageItem} from './Types'
+import reactLogo from './image/react-logo.svg'
+import vueLogo from './image/vue-logo.png'
+import angularLogo from './image/angular-logo.svg'
 
-export const roomItems = [
+export const roomItems: Array<roomItem> = [
   {
     roomName: "React.js",
     description: "React & StorybookでLINEのUIを模写する",
@@ -26,7 +27,7 @@ export const roomItems = [
   }
 ]
 
-export const messageItems = [
+export const messageItems: Array<messageItem> = [
   {
     userName: "React Lover",
     body: "I love React, Redux, Redux-Router, Next.js.",
@@ -38,5 +39,11 @@ export const messageItems = [
     body: "I love Vue, Vuex, Vue-Router, Nuxt.js.",
     time: "13:00",
     image: vueLogo,
+  },
+  {
+    userName: "AngularJS Lover",
+    body: "I love AngularJS.",
+    time: "14:00",
+    image: angularLogo,
   },
 ]

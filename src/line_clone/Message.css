@@ -7,29 +7,48 @@
 }
 
 .Message__Left {
-  padding: 4px;
+  padding: 8px 4px;
   display: flex;
-  align-items: start;
+  align-items: flex-start;
 }
 
 .Message__Image {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  background-color: #FFFFFF;
 }
 
 .Message__Center {
   width: 280px;
-  padding: 4px;
+  padding-left: 4px;
+  padding-bottom: 4px;
+  padding-right: 4px;
 }
 
 .Message__UserName {
+  padding-top: 4px;
+  font-size: 12px;
   color: #FFFFFF;
 }
 
 .Message__Body {
+  margin-left: 4px;
+  padding: 4px 8px 4px 12px;
   background-color: #F8FAFC;
-  border-radius: .50rem;
+  border-radius: .9999rem;
+  position: relative;
+}
+
+.Message__Body:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: -4px;
+  left: -19px;
+  border: 8px solid transparent;
+  border-right: 18px solid #F8FAFC;
+  transform: rotate(35deg);
 }
 
 .Message__Right {
@@ -37,8 +56,10 @@
   padding-right: 4px;
   display: flex;
   align-items: flex-end;
+  font-size: 12px;
 }
 
 .Message__Time {
+  padding-bottom: 4px;
   color: #FFFFFF;
 }
