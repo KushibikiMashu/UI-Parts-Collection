@@ -5,8 +5,7 @@
     display: flex;
     width: 440px;
     height: 80px;
-    margin: 10px 0px;
-    border: #1a202c 1px solid;
+    margin: 12px 0px;
 }
 
 .ChatRoom--Img {
@@ -18,7 +17,7 @@
 
 .ChatRoom--Containts {
     display: flex;
-    padding: 12px 0;
+    padding: 16px 0;
 }
 
 .ChatRoom--Containts_Left {
