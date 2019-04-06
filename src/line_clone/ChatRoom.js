@@ -1,4 +1,5 @@
 import React from "react";
+import './ChatRoom.css'
 
 export default function ChatRoom({roomName, description, time, newPostCount, img}) {
   return (
