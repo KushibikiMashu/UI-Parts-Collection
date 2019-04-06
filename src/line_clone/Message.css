@@ -1,0 +1,36 @@
+.Message{
+    width: 360px;
+    display: flex;
+
+    /* これはMessageList or Roomに入れる */
+    background-color: #BCDEFA;
+}
+
+.Message__Left{
+
+}
+
+.Message__Img{
+
+}
+
+.Message__Center{
+
+}
+
+.Message__UserName{
+
+}
+
+.Message__Message{
+
+}
+
+.Message__Right{
+    display: flex;
+    align-items: end;
+}
+
+.Message__Time{
+
+}

@@ -2,12 +2,14 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 
 import App from '../../src/line_clone/App'
-import ChatRoomItem from '../../src/line_clone/RoomItem'
+import RoomItem from '../../src/line_clone/RoomItem'
+import Message from '../../src/line_clone/Message'
 import reactLogo from "../../src/line_clone/react-logo.svg";
 
 storiesOf('LINE CLONE', module)
   .add('App', () => <App/>)
-  .add('ChatRoomItem', () => <ChatRoomItem {...item}/>)
+  .add('RoomItem', () => <RoomItem {...item}/>)
+  .add('Message', () => <Message/>)
 
 const item = {
   roomName: "React.js",
