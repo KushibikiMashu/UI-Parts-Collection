@@ -13,8 +13,8 @@ export default function App() {
           </div>
           <div className="ChatRoom--Containts">
             <div className="ChatRoom--Containts_Left">
-              <p className="ChatRoom--Containts_RoomName">熊野鍋 (7)</p>
-              <p className="ChatRoom--Containts_Description">おれ多分、7/6に上海行って、11日に西安でみんなと合流かな</p>
+              <p className="ChatRoom--Containts_RoomName">React (7)</p>
+              <p className="ChatRoom--Containts_Description">React & StorybookでLINEのUIを模写する</p>
             </div>
             <div className="ChatRoom--Containts_Right">
               <p className="ChatRoom--Containts_Time">午前 11:18</p>
