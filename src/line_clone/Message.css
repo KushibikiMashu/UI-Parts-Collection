@@ -1,36 +1,44 @@
 .Message {
-    width: 360px;
-    display: flex;
+  width: 360px;
+  display: flex;
 
-    /* これはMessageList or Roomに入れる */
-    background-color: #BCDEFA;
+  /* これはMessageList or Roomに入れる */
+  background-color: #BCDEFA;
 }
 
 .Message__Left {
-
+  padding: 4px;
+  display: flex;
+  align-items: start;
 }
 
-.Message__Img {
-
+.Message__Image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 .Message__Center {
-
+  width: 280px;
+  padding: 4px;
 }
 
 .Message__UserName {
-
+  color: #FFFFFF;
 }
 
-.Message__Message {
-
+.Message__Body {
+  background-color: #F8FAFC;
+  border-radius: .50rem;
 }
 
 .Message__Right {
-    margin-left: auto;
-    display: flex;
-    align-items: flex-end;
+  margin-left: auto;
+  padding-right: 4px;
+  display: flex;
+  align-items: flex-end;
 }
 
 .Message__Time {
+  color: #FFFFFF;
 }
