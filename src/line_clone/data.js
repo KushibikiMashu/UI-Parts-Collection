@@ -29,13 +29,13 @@ export const roomItems = [
 export const messageItems = [
   {
     userName: "React Lover",
-    body: "React Redux Redux-Router Next.js",
+    body: "I love React, Redux, Redux-Router, Next.js.",
     time: "12:00",
     image: reactLogo,
   },
   {
     userName: "Vue.js Lover",
-    body: "Vue Vuex Vue-Router Nuxt.js",
+    body: "I love Vue, Vuex, Vue-Router, Nuxt.js.",
     time: "13:00",
     image: vueLogo,
   },

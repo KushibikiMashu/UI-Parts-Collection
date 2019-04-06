@@ -2,19 +2,15 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 
 import App from '../../src/line_clone/App'
+import RoomList from '../../src/line_clone/RoomList'
 import RoomItem from '../../src/line_clone/RoomItem'
+import MessageList from '../../src/line_clone/MessageList'
 import Message from '../../src/line_clone/Message'
-import reactLogo from "../../src/line_clone/react-logo.svg";
+import {roomItems, messageItems} from '../../src/line_clone/data.js'
 
 storiesOf('LINE CLONE', module)
   .add('App', () => <App/>)
-  .add('RoomItem', () => <RoomItem {...item}/>)
-  .add('Message', () => <Message/>)
-
-const item = {
-  roomName: "React.js",
-  description: "React & StorybookでLINEのUIを模写する",
-  time: "午前 11:18",
-  newPostCount: "4",
-  img: reactLogo,
-}
+  .add('RoomList', () => <RoomList/>)
+  .add('RoomItem', () => <RoomItem {...roomItems[0]}/>)
+  .add('MessageList', () => <MessageList/>)
+  .add('Message', () => <Message {...messageItems[0]}/>)
