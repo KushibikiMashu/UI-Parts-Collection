@@ -5,48 +5,50 @@
     display: flex;
     width: 440px;
     height: 80px;
-    margin: 4px 0px;
+    margin: 4px 0;
 }
 
-.ChatRoom--Img {
-    width: 80px;
+.ChatRoom__Left {
     display: flex;
     justify-content: center;
-    border-radius: .50rem;
+    align-items: center;
 }
 
-.ChatRoom--Containts {
-    display: flex;
-    padding: 16px 0;
+.ChatRoom__Image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
 }
 
-.ChatRoom--Containts_Left {
+.ChatRoom__Center {
     width: 280px;
+    padding: 16px 0;
     font-size: 12px;
 }
 
-.ChatRoom--Containts_RoomName {}
-
-.ChatRoom--Containts_Description {
-    color: gray;
+.ChatRoom__RoomName {
 }
 
-.ChatRoom--Containts_Right {
-    width: 80px;
+.ChatRoom__Description {
+    color: #B8C2CC;
+}
+
+.ChatRoom__Right {
+    width: 100px;
     padding-right: 8px;
     font-size: 12px;
 }
 
-.ChatRoom--Containts_Time {
-    color: gray;
+.ChatRoom__Time {
+    color: #B8C2CC;
     text-align: right;
 }
 
-.ChatRoom--Containts_Badge {
+.ChatRoom__Badge {
     width: 26px;
     margin-left: auto;
     color: #FFFFFF;
     text-align: center;
-    background-color: limegreen;
+    background-color: #1dcd00;
     border-radius: .75rem;
 }

@@ -1,42 +1,63 @@
 import React from 'react';
 import './App.css';
 
-import logo from '../sample/logo.svg';
+import reactLogo from './react-logo.svg';
+import vueLogo from './vue-logo.png';
+import angularLogo from './angular-logo.svg';
 
 function ChatRoom({roomName, description, time, newPostCount, img}) {
   return (
-    <div className="ChatRoom">
-      <div className="ChatRoom--Img">
-        <img src={img} alt="logo"/>
-      </div>
-      <div className="ChatRoom--Containts">
-        <div className="ChatRoom--Containts_Left">
-          <p className="ChatRoom--Containts_RoomName">{roomName}</p>
-          <p className="ChatRoom--Containts_Description">{description}</p>
+    <>
+      <div className="ChatRoom">
+        <div className="ChatRoom__Left">
+          <img className="ChatRoom__Image" src={img} alt="logo"/>
         </div>
-        <div className="ChatRoom--Containts_Right">
-          <p className="ChatRoom--Containts_Time">{time}</p>
-          <p className="ChatRoom--Containts_Badge">{newPostCount}</p>
+        <div className="ChatRoom__Center">
+          <p className="ChatRoom__RoomName">{roomName}</p>
+          <p className="ChatRoom__Description">{description}</p>
+        </div>
+        <div className="ChatRoom__Right">
+          <p className="ChatRoom__Time">{time}</p>
+          {newPostCount !== "0" && <p className="ChatRoom__Badge">{newPostCount}</p>}
         </div>
       </div>
-    </div>
+    </>
   )
 }
 
 export default function App() {
-  const props = {
-    roomName: "React (7)",
-    description: "React & StorybookでLINEのUIを模写する",
-    time:"午前 11:18",
-    newPostCount:"4",
-    img: logo,
-  }
+  const {react, vue, angular} = props
   return (
     <>
       <div className="Main">
-        <ChatRoom {...props}/>
-        <ChatRoom {...props}/>
+        <ChatRoom {...react}/>
+        <ChatRoom {...vue}/>
+        <ChatRoom {...angular}/>
       </div>
     </>
   )
+}
+
+const props = {
+  "react": {
+    roomName: "React.js",
+    description: "React & StorybookでLINEのUIを模写する",
+    time: "午前 11:18",
+    newPostCount: "4",
+    img: reactLogo,
+  },
+  "vue": {
+    roomName: "Vue.js",
+    description: " Vue.jsのルームです",
+    time: "午前 7:08",
+    newPostCount: "1",
+    img: vueLogo,
+  },
+  "angular": {
+    roomName: "AngularJS",
+    description: " AngularJSのルームです",
+    time: "昨日",
+    newPostCount: "0",
+    img: angularLogo,
+  }
 }
