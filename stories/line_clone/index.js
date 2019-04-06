@@ -2,7 +2,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 
 import App from '../../src/line_clone/App'
-import ChatRoomItem from '../../src/line_clone/ChatRoomItem'
+import ChatRoomItem from '../../src/line_clone/RoomItem'
 import reactLogo from "../../src/line_clone/react-logo.svg";
 
 storiesOf('LINE CLONE', module)

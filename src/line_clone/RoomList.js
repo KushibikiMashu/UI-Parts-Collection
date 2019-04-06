@@ -1,5 +1,5 @@
 import React from "react";
-import ChatRoomItem from './ChatRoomItem'
+import ChatRoomItem from './RoomItem'
 import { items } from './data.js'
 
 export default function ChatRoomList() {
