@@ -1,7 +1,7 @@
 import React from "react";
-import './ChatRoom.css'
+import './ChatRoomItem.css'
 
-export default function ChatRoom({roomName, description, time, newPostCount, img}) {
+export default function ChatRoomItem({roomName, description, time, newPostCount, img}) {
   return (
     <>
       <div className="ChatRoom">

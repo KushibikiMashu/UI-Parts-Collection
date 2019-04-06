@@ -2,19 +2,17 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 
 import App from '../../src/line_clone/App'
-import ChatRoom from '../../src/line_clone/ChatRoom'
+import ChatRoomItem from '../../src/line_clone/ChatRoomItem'
 import reactLogo from "../../src/line_clone/react-logo.svg";
 
 storiesOf('LINE CLONE', module)
   .add('App', () => <App/>)
-  .add('ChatRoom', () => <ChatRoom {...props.react}/>)
+  .add('ChatRoomItem', () => <ChatRoomItem {...item}/>)
 
-const props = {
-  "react": {
-    roomName: "React.js",
-    description: "React & StorybookでLINEのUIを模写する",
-    time: "午前 11:18",
-    newPostCount: "4",
-    img: reactLogo,
-  }
+const item = {
+  roomName: "React.js",
+  description: "React & StorybookでLINEのUIを模写する",
+  time: "午前 11:18",
+  newPostCount: "4",
+  img: reactLogo,
 }
