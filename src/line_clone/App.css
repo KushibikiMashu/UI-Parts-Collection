@@ -22,7 +22,7 @@
 
 .ChatRoom__Center {
     width: 280px;
-    padding: 16px 0;
+    padding: 8px;
     font-size: 12px;
 }
 
@@ -35,7 +35,7 @@
 
 .ChatRoom__Right {
     width: 100px;
-    padding-right: 8px;
+    padding: 8px;
     font-size: 12px;
 }
 
