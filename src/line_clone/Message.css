@@ -1,4 +1,4 @@
-.Message{
+.Message {
     width: 360px;
     display: flex;
 
@@ -6,31 +6,31 @@
     background-color: #BCDEFA;
 }
 
-.Message__Left{
+.Message__Left {
 
 }
 
-.Message__Img{
+.Message__Img {
 
 }
 
-.Message__Center{
+.Message__Center {
 
 }
 
-.Message__UserName{
+.Message__UserName {
 
 }
 
-.Message__Message{
+.Message__Message {
 
 }
 
-.Message__Right{
+.Message__Right {
+    margin-left: auto;
     display: flex;
-    align-items: end;
+    align-items: flex-end;
 }
 
-.Message__Time{
-
+.Message__Time {
 }

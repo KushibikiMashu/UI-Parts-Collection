@@ -13,7 +13,7 @@ export default function Message() {
         <p className="Message__Message">message</p>
       </div>
       <div className="Message__Right">
-        <div className="Message__Time">time</div>
+        <p className="Message__Time">time</p>
       </div>
     </div>
   )
