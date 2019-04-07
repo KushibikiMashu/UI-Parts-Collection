@@ -2,13 +2,14 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 require("./MyMessage.scss");
-function MyMessage() {
+function MyMessage(_a) {
+    var body = _a.body, time = _a.time;
     return (<div className="MyMessage">
             <div className="MyMessage__Left">
-                <p className="MyMessage__Time">午後 15:00</p>
+                <p className="MyMessage__Time">{time}</p>
             </div>
             <div className="MyMessage__Center">
-                <p className="MyMessage__Body">a</p>
+                <p className="MyMessage__Body">{body}</p>
             </div>
         </div>);
 }

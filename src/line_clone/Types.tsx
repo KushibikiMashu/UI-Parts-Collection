@@ -10,5 +10,5 @@ export type messageItem = {
     userName: string,
     body: string,
     time: string,
-    image: string,
+    image?: string,
 }

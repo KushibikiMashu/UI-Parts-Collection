@@ -45,4 +45,10 @@ exports.messageItems = [
         time: "午後 14:00",
         image: angularLogo,
     },
+    {
+        userName: "self",
+        body: "Creating clone app of LINE.",
+        time: "午後 15:00",
+        image: null,
+    },
 ];
