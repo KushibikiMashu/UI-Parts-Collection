@@ -1,5 +1,5 @@
 .Input {
-  width: 360px;
+  max-width: 375px;
   height: 44px;
   display: flex;
   justify-content: center;
@@ -28,6 +28,10 @@
 
     &--Send {
       color: #3490DC;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }
