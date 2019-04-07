@@ -30,19 +30,19 @@ exports.messageItems = [
     {
         userName: "React Lover",
         body: "I love React, Redux, Redux-Router, Next.js.",
-        time: "12:00",
+        time: "午前 12:00",
         image: reactLogo,
     },
     {
         userName: "Vue.js Lover",
         body: "I love Vue, Vuex, Vue-Router, Nuxt.js.",
-        time: "13:00",
+        time: "午後 13:00",
         image: vueLogo,
     },
     {
         userName: "AngularJS Lover",
         body: "I love AngularJS.",
-        time: "14:00",
+        time: "午後 14:00",
         image: angularLogo,
     },
 ];
