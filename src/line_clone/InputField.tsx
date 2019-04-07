@@ -1,17 +1,17 @@
-import * as React from "react";
-import {useState, useCallback, useContext} from "react";
+import * as React from "react"
+import {useState, useCallback, useContext} from "react"
 import './InputField.scss'
 import {MessageContext} from './Context'
-import moment = require('moment');
+import moment = require('moment')
 
 export default function InputField(): JSX.Element {
     const [text, setText] = useState('')
-    const inputCallback = useCallback(e => setText(e.target.value), [text])
+    const setTextCallback = useCallback(e => setText(e.target.value), [text])
     const {_, dispatch} = useContext(MessageContext)
 
-    function handleClick() {
+    function send() {
         const prefix = parseInt(moment().format('HH'), 10) < 12 ? '午前' : '午後'
-        const time = (moment().format('HH:mm')).toString();
+        const time = (moment().format('HH:mm')).toString()
         dispatch({
             type: 'SEND_MESSAGE',
             message: text,
@@ -29,13 +29,18 @@ export default function InputField(): JSX.Element {
                 className="Input__Field"
                 type="text"
                 value={text}
-                onChange={inputCallback}
+                onChange={setTextCallback}
+                onKeyPress={e => {
+                    if (e.key === 'Enter') {
+                        send()
+                    }
+                }}
             />
             <div className="Input__Icon">
                 {text ?
                     <i
                         className="Input__Icon--Send material-icons"
-                        onClick={handleClick}
+                        onClick={send}
                     >send</i> :
                     <i className="Input__Icon--Mic material-icons">mic</i>
                 }
