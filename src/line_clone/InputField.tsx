@@ -2,6 +2,7 @@ import * as React from "react";
 import {useState, useCallback, useContext} from "react";
 import './InputField.scss'
 import {MessageContext} from './Context'
+import moment = require('moment');
 
 export default function InputField(): JSX.Element {
     const [text, setText] = useState('')
@@ -9,7 +10,13 @@ export default function InputField(): JSX.Element {
     const {_, dispatch} = useContext(MessageContext)
 
     function handleClick() {
-        dispatch({type: 'SEND_MESSAGE', message: text})
+        const prefix = parseInt(moment().format('HH'), 10) < 12 ? '午前' : '午後'
+        const time = (moment().format('HH:mm')).toString();
+        dispatch({
+            type: 'SEND_MESSAGE',
+            message: text,
+            time: `${prefix} ${time}`,
+        })
         setText('')
     }
 

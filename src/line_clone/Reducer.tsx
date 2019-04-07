@@ -7,7 +7,7 @@ export function reducer(state, action) {
                 messages: state.messages.concat({
                     userName: "self",
                     body: action.message,
-                    time: (new Date()).toString(),
+                    time: action.time,
                     image: null,
                 })
             })
