@@ -1,7 +1,7 @@
 import * as React from "react"
 import {useState, useCallback, useContext} from "react"
 import './InputField.scss'
-import {MessageContext} from './Context'
+import {MessageContext} from '../Context'
 import moment = require('moment')
 
 function getTime(): string {
@@ -14,7 +14,7 @@ export default function InputField(): JSX.Element {
     const [text, setText] = useState('')
     const setTextCallback = useCallback(e => setText(e.target.value), [text])
     const {_, dispatch} = useContext(MessageContext)
-    
+
     function send() {
         const message = text.trim()
         if (message === '') {

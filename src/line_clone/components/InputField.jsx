@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var react_1 = require("react");
 require("./InputField.scss");
-var Context_1 = require("./Context");
+var Context_1 = require("../Context");
 var moment = require("moment");
 function getTime() {
     var prefix = parseInt(moment().format('HH'), 10) < 12 ? '午前' : '午後';

@@ -1,6 +1,6 @@
 import * as React from "react"
-import './Message.scss'
-import {messageItem as Props} from './Types'
+import './OtherMessage.scss'
+import {messageItem as Props} from '../Types'
 
 export default function OtherMessage({userName, body, time, image}: Props): JSX.Element {
     return (
