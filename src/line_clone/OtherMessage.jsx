@@ -1,10 +1,10 @@
-import * as React from "react";
-import './Message.scss'
-import {messageItem as Props} from './Types'
-
-export default function Message({userName, body, time, image}: Props): JSX.Element {
-    return (
-        <>
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = require("react");
+require("./OtherMessage.scss");
+function OtherMessage(_a) {
+    var userName = _a.userName, body = _a.body, time = _a.time, image = _a.image;
+    return (<>
             <div className="Message">
                 <div className="Message__Left">
                     <img className="Message__Image" src={image} alt="user"/>
@@ -17,6 +17,6 @@ export default function Message({userName, body, time, image}: Props): JSX.Eleme
                     <p className="Message__Time">{time}</p>
                 </div>
             </div>
-        </>
-    )
+        </>);
 }
+exports.default = OtherMessage;
