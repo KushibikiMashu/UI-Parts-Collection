@@ -1,15 +1,8 @@
 import React from "react";
 import './RoomItem.css'
+import {roomItem as Props} from './Types'
 
-type Props = {
-    roomName: string,
-    description: string,
-    time: string,
-    newPostCount: string,
-    img: string,
-}
-
-export default function ChatRoomItem({roomName, description, time, newPostCount, img}: Props) {
+export default function ChatRoomItem({roomName, description, time, newPostCount, img}: Props): JSX.Element {
   return (
     <div className="RoomItem">
       <div className="RoomItem__Left">

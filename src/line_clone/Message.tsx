@@ -1,14 +1,8 @@
 import React from "react";
 import './Message.css'
+import {messageItem as Props} from './Types'
 
-type Props = {
-    userName: string,
-    body: string,
-    time: string,
-    image: string,
-}
-
-export default function Message({userName, body, time, image}: Props) {
+export default function Message({userName, body, time, image}: Props): JSX.Element {
   return (
     <div className="Message">
       <div className="Message__Left">
