@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var react_1 = require("react");
+var React = require("react");
 require("./Message.css");
 function Message(_a) {
     var userName = _a.userName, body = _a.body, time = _a.time, image = _a.image;

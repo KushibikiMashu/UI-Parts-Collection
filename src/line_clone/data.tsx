@@ -1,7 +1,7 @@
 import {roomItem, messageItem} from './Types'
-import reactLogo from './image/react-logo.svg'
-import vueLogo from './image/vue-logo.png'
-import angularLogo from './image/angular-logo.svg'
+import reactLogo = require('./image/react-logo.svg')
+import vueLogo = require('./image/vue-logo.png')
+import angularLogo = require('./image/angular-logo.svg')
 
 export const roomItems: Array<roomItem> = [
   {

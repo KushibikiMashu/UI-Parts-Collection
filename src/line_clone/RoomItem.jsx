@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var react_1 = require("react");
+var React = require("react");
 require("./RoomItem.css");
 function ChatRoomItem(_a) {
     var roomName = _a.roomName, description = _a.description, time = _a.time, newPostCount = _a.newPostCount, img = _a.img;
