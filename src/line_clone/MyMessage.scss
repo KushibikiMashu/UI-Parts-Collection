@@ -1,0 +1,45 @@
+.MyMessage {
+  width: 360px;
+  padding: 4px 0;
+  display: flex;
+  background-color: #BCDEFA;
+
+  &__Left {
+    margin-left: auto;
+    padding-right: 4px;
+    display: flex;
+    align-items: flex-end;
+    font-size: 12px;
+  }
+
+  &__Time {
+    padding-left: 8px;
+    padding-bottom: 4px;
+    color: #FFFFFF;
+  }
+
+  &__Center {
+    padding-left: 4px;
+    padding-bottom: 4px;
+    padding-right: 4px;
+  }
+
+  &__Body {
+    margin-right: 12px;
+    padding: 4px 12px;
+    background-color:  #A2F66B;
+    border-radius: .9999rem;
+    position: relative;
+
+    &:after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: -2px;
+      right: -19px;
+      border: 8px solid transparent;
+      border-right: 18px solid #A2F66B;
+      transform: rotate(135deg);
+    }
+  }
+}

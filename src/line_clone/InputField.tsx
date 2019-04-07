@@ -13,8 +13,13 @@ export default function InputField(): JSX.Element {
                 value={text}
                 onChange={inputCallback}
             />
-            <i className="Input__Icon--Send material-icons">send</i>
-            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+            <div className="Input__Icon">
+                {text ?
+                    <i className="Input__Icon--Send material-icons">send</i> :
+                    <i className="Input__Icon--Mic material-icons">mic</i>
+                }
+                <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+            </div>
         </div>
     )
 }
