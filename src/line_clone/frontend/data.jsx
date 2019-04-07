@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var reactLogo = require("./image/react-logo.svg");
-var vueLogo = require("./image/vue-logo.png");
-var angularLogo = require("./image/angular-logo.svg");
+var reactLogo = require("../image/react-logo.svg");
+var vueLogo = require("../image/vue-logo.png");
+var angularLogo = require("../image/angular-logo.svg");
 exports.roomItems = [
     {
         roomName: "React.js",

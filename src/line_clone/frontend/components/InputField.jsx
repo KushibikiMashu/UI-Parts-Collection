@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
-var react_1 = require("react");
 require("./InputField.scss");
 var Context_1 = require("../Context");
 var moment = require("moment");
@@ -11,9 +10,9 @@ function getTime() {
     return prefix + " " + now;
 }
 function InputField() {
-    var _a = react_1.useState(''), text = _a[0], setText = _a[1];
-    var setTextCallback = react_1.useCallback(function (e) { return setText(e.target.value); }, [text]);
-    var _b = react_1.useContext(Context_1.MessageContext), _ = _b._, dispatch = _b.dispatch;
+    var _a = React.useState(''), text = _a[0], setText = _a[1];
+    var setTextCallback = React.useCallback(function (e) { return setText(e.target.value); }, [text]);
+    var _b = React.useContext(Context_1.MessageContext), _ = _b._, dispatch = _b.dispatch;
     function send() {
         var message = text.trim();
         if (message === '') {

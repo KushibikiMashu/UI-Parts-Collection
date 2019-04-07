@@ -1,16 +1,16 @@
 import * as React from "react"
 import { storiesOf } from "@storybook/react"
 
-import App from '../../src/line_clone/components/App'
-import Room from '../../src/line_clone/components/Room'
-import RoomList from '../../src/line_clone/components/RoomList'
-import RoomItem from '../../src/line_clone/components/RoomItem'
-import MessageList from '../../src/line_clone/components/MessageList'
-import MyMessage from '../../src/line_clone/components/MyMessage'
-import Message from '../../src/line_clone/components/OtherMessage'
-import InputField from '../../src/line_clone/components/InputField'
+import App from '../../src/line_clone/frontend/components/App'
+import Room from '../../src/line_clone/frontend/components/Room'
+import RoomList from '../../src/line_clone/frontend/components/RoomList'
+import RoomItem from '../../src/line_clone/frontend/components/RoomItem'
+import MessageList from '../../src/line_clone/frontend/components/MessageList'
+import MyMessage from '../../src/line_clone/frontend/components/MyMessage'
+import Message from '../../src/line_clone/frontend/components/OtherMessage'
+import InputField from '../../src/line_clone/frontend/components/InputField'
 
-import { roomItems, messageItems } from '../../src/line_clone/data'
+import { roomItems, messageItems } from '../../src/line_clone/frontend/data'
 
 storiesOf('LINE CLONE', module)
   .add('App', () => <App/>)
