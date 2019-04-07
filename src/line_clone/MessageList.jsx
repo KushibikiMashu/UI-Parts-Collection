@@ -4,14 +4,17 @@ var React = require("react");
 var MyMessage_1 = require("./MyMessage");
 var Message_1 = require("./Message");
 var data_1 = require("./data");
+var react_1 = require("react");
+var Context_1 = require("./Context");
 function MessageList() {
-    var messages = data_1.messageItems.map(function (item) {
+    var state = react_1.useContext(Context_1.MessageContext).state;
+    var allMessages = data_1.messageItems.concat(state.messages).map(function (item) {
         return item.userName === 'self' ?
-            <MyMessage_1.default {...item}/> :
-            <Message_1.default {...item} key={item.time}/>;
+            <MyMessage_1.default {...item} key={item.body}/> :
+            <Message_1.default {...item} key={item.body}/>;
     });
     return (<>
-            {messages}
+            {allMessages}
         </>);
 }
 exports.default = MessageList;

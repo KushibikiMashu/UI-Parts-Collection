@@ -4,9 +4,9 @@ var React = require("react");
 require("./App.scss");
 function App() {
     return (<>
-      <div className="Main">
-        App
-      </div>
-    </>);
+            <div className="Main">
+                App
+            </div>
+        </>);
 }
 exports.default = App;
