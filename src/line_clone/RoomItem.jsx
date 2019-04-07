@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
-require("./RoomItem.css");
+require("./RoomItem.scss");
 function ChatRoomItem(_a) {
     var roomName = _a.roomName, description = _a.description, time = _a.time, newPostCount = _a.newPostCount, img = _a.img;
     return (<div className="RoomItem">
@@ -9,7 +9,7 @@ function ChatRoomItem(_a) {
         <img className="RoomItem__Image" src={img} alt="logo"/>
       </div>
       <div className="RoomItem__Center">
-        <p className="RoomItem__RoomName">{roomName}</p>
+        <p>{roomName}</p>
         <p className="RoomItem__Description">{description}</p>
       </div>
       <div className="RoomItem__Right">

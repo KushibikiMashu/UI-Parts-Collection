@@ -1,0 +1,54 @@
+.RoomItem {
+  width: 360px;
+  height: 60px;
+  margin: 4px 4px;
+  display: flex;
+
+  &__Left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__Image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  &__Center {
+    width: 280px;
+    padding-top: 4px;
+    padding-left: 8px;
+    padding-bottom: 4px;
+    font-size: 12px;
+    border-bottom: #F1F5F8 1px solid;
+  }
+
+  &__Description {
+    color: #B8C2CC;
+  }
+
+  &__Right {
+    width: 80px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-bottom: 4px;
+    font-size: 12px;
+    border-bottom: #F1F5F8 1px solid;
+  }
+
+  &__Time {
+    color: #B8C2CC;
+    text-align: right;
+  }
+
+  &__Badge {
+    width: 26px;
+    margin-left: auto;
+    color: #FFFFFF;
+    text-align: center;
+    background-color: #1dcd00;
+    border-radius: .75rem;
+  }
+}
+

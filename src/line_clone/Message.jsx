@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
-require("./Message.css");
+require("./Message.scss");
 function Message(_a) {
     var userName = _a.userName, body = _a.body, time = _a.time, image = _a.image;
     return (<div className="Message">

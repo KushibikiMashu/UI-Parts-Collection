@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_1 = require("react");
-require("./App.css");
+require("./App.scss");
 function App() {
     return (<>
       <div className="Main">
