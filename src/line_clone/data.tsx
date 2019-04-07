@@ -8,7 +8,7 @@ export const roomItems: Array<roomItem> = [
     roomName: "React.js",
     description: "React & StorybookでLINEのUIを模写する",
     time: "午前 11:18",
-    newPostCount: "4",
+    newPostCount: "3",
     img: reactLogo
   },
   {

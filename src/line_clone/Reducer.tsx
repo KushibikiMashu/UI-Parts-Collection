@@ -1,13 +1,14 @@
 import * as React from 'react'
 
-export function reducer(state, action) {
+export function Reducer(state, action) {
     switch (action.type) {
         case 'SEND_MESSAGE':
+            const {message, time} = action
             return Object.assign({}, state, {
                 messages: state.messages.concat({
                     userName: "self",
-                    body: action.message,
-                    time: action.time,
+                    body: message,
+                    time,
                     image: null,
                 })
             })

@@ -1,13 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-function reducer(state, action) {
+function Reducer(state, action) {
     switch (action.type) {
         case 'SEND_MESSAGE':
+            var message = action.message, time = action.time;
             return Object.assign({}, state, {
                 messages: state.messages.concat({
                     userName: "self",
-                    body: action.message,
-                    time: action.time,
+                    body: message,
+                    time: time,
                     image: null,
                 })
             });
@@ -15,4 +16,4 @@ function reducer(state, action) {
             throw new Error();
     }
 }
-exports.reducer = reducer;
+exports.Reducer = Reducer;

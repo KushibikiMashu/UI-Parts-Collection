@@ -4,24 +4,31 @@ import './InputField.scss'
 import {MessageContext} from './Context'
 import moment = require('moment')
 
+function getTime(): string {
+    const prefix = parseInt(moment().format('HH'), 10) < 12 ? '午前' : '午後'
+    const now = (moment().format('HH:mm')).toString()
+    return `${prefix} ${now}`
+}
+
 export default function InputField(): JSX.Element {
     const [text, setText] = useState('')
     const setTextCallback = useCallback(e => setText(e.target.value), [text])
     const {_, dispatch} = useContext(MessageContext)
-
+    
     function send() {
-        const prefix = parseInt(moment().format('HH'), 10) < 12 ? '午前' : '午後'
-        const time = (moment().format('HH:mm')).toString()
+        const message = text.trim()
+        if (message === '') {
+            setText('')
+            return
+        }
+
         dispatch({
             type: 'SEND_MESSAGE',
-            message: text,
-            time: `${prefix} ${time}`,
+            message,
+            time: getTime(),
         })
         setText('')
     }
-
-    // userNameの取り出しにuseContextを使ってもいい
-    // keyPress Enterでもreducerが動くようにする
 
     return (
         <div className="Input">
