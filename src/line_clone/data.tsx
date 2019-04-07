@@ -50,6 +50,8 @@ export const messageItems: Array<messageItem> = [
     userName: "self",
     body: "Creating clone app of LINE.",
     time: "午後 15:00",
+      // image:nullの行は削除してok?
+      // 型を ?stringにしているので
     image: null,
   },
 ]

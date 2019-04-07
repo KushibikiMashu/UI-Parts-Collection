@@ -18,7 +18,8 @@ function InputField() {
         var obj = {
             userName: "self",
             body: text,
-            time: (new Date()).toString()
+            time: (new Date()).toString(),
+            image: null,
         };
         console.log(obj);
         setText('');
