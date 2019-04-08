@@ -5,7 +5,7 @@ import {messageItems} from '../data'
 import {MessageContext} from "../Context"
 
 export default function MessageList(): JSX.Element {
-    const {state} = React.useContext(MessageContext)
+    const {state, _} = React.useContext(MessageContext)
     const allMessages = messageItems.concat(state.messages).map(
         item => {
             return item.userName === 'self' ?

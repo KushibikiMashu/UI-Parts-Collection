@@ -2,7 +2,7 @@ import * as React from "react";
 import './RoomItem.scss'
 import {roomItem as Props} from '../Types'
 
-export default function ChatRoomItem({roomName, description, time, newPostCount, img}: Props): JSX.Element {
+export default function RoomItem({roomName, description, time, newPostCount, img}: Props): JSX.Element {
   return (
     <div className="RoomItem">
       <div className="RoomItem__Left">

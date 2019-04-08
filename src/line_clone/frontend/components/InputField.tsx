@@ -1,7 +1,8 @@
 import * as React from "react"
 import './InputField.scss'
 import {MessageContext} from '../Context'
-import moment = require('moment')
+
+const moment = require('moment')
 
 function getTime(): string {
     const prefix = parseInt(moment().format('HH'), 10) < 12 ? '午前' : '午後'
