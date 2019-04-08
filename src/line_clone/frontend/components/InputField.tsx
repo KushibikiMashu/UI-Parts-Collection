@@ -4,16 +4,17 @@ import {MessageContext} from '../Context'
 
 const moment = require('moment')
 
+// helper関数
 function getTime(): string {
     const prefix = parseInt(moment().format('HH'), 10) < 12 ? '午前' : '午後'
     const now = (moment().format('HH:mm')).toString()
     return `${prefix} ${now}`
 }
 
-export default function InputField(): JSX.Element {
+export default function InputField(dispatch): JSX.Element {
     const [text, setText] = React.useState('')
     const setTextCallback = React.useCallback(e => setText(e.target.value), [text])
-    const {_, dispatch} = React.useContext(MessageContext)
+    // const {_, dispatch} = React.useContext(MessageContext)
 
     function send() {
         const message = text.trim()
@@ -24,8 +25,10 @@ export default function InputField(): JSX.Element {
 
         dispatch({
             type: 'SEND_MESSAGE',
-            message,
-            time: getTime(),
+            payload: {
+                body: message,
+                time: getTime(),
+            }
         })
         setText('')
     }
