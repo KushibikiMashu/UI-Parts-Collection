@@ -29,24 +29,28 @@ export const roomItems: Array<roomItem> = [
 
 export const messageItems: Array<messageItem> = [
   {
+    id: 1,
     userName: "React Lover",
     body: "I love React, Redux, Redux-Router, Next.js.",
     time: "午前 12:00",
     image: reactLogo,
   },
   {
+    id: 2,
     userName: "Vue.js Lover",
     body: "I love Vue, Vuex, Vue-Router, Nuxt.js.",
     time: "午後 13:00",
     image: vueLogo,
   },
   {
+    id: 3,
     userName: "AngularJS Lover",
     body: "I love AngularJS.",
     time: "午後 14:00",
     image: angularLogo,
   },
   {
+    id: 4,
     userName: "self",
     body: "Creating clone app of LINE.",
     time: "午後 15:00",

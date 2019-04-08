@@ -7,6 +7,7 @@ export type roomItem = {
 }
 
 export type messageItem = {
+    id: number,
     userName: string,
     body: string,
     time: string,
