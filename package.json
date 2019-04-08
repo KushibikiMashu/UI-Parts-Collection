@@ -20,7 +20,7 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "server": "node src/line_clone/backend/index.js"
+    "server": "node src/line_clone/backend/server.js"
   },
   "eslintConfig": {
     "extends": "react-app"
