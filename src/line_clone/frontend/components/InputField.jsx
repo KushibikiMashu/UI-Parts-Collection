@@ -1,43 +1,61 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var React = require("react");
-require("./InputField.scss");
-var Context_1 = require("../Context");
-var moment = require("moment");
+import * as React from "react"
+import './InputField.scss'
+import { MessageContext } from '../Context'
+
+const moment = require('moment')
+
+// helper関数
 function getTime() {
-    var prefix = parseInt(moment().format('HH'), 10) < 12 ? '午前' : '午後';
-    var now = (moment().format('HH:mm')).toString();
-    return prefix + " " + now;
+  const prefix = parseInt(moment().format('HH'), 10) < 12 ? '午前' : '午後'
+  const now = (moment().format('HH:mm')).toString()
+  return `${prefix} ${now}`
 }
-function InputField() {
-    var _a = React.useState(''), text = _a[0], setText = _a[1];
-    var setTextCallback = React.useCallback(function (e) { return setText(e.target.value); }, [text]);
-    var _b = React.useContext(Context_1.MessageContext), _ = _b._, dispatch = _b.dispatch;
-    function send() {
-        var message = text.trim();
-        if (message === '') {
-            setText('');
-            return;
-        }
-        dispatch({
-            type: 'SEND_MESSAGE',
-            message: message,
-            time: getTime(),
-        });
-        setText('');
+
+export default function InputField() {
+  const [text, setText] = React.useState('')
+  const setTextCallback = React.useCallback(e => setText(e.target.value), [text])
+  const {dispatch} = React.useContext(MessageContext)
+
+  function send() {
+    const message = text.trim()
+    if (message === '') {
+      setText('')
+      return
     }
-    return (<div className="Input">
-            <input className="Input__Field" type="text" value={text} onChange={setTextCallback} onKeyPress={function (e) {
-        if (e.key === 'Enter') {
-            send();
+
+    dispatch({
+      type: 'SEND_MESSAGE',
+      payload: {
+        body: message,
+        time: getTime(),
+      }
+    })
+    setText('')
+  }
+
+  return (
+    <div className="Input">
+      <input
+        className="Input__Field"
+        type="text"
+        value={text}
+        onChange={setTextCallback}
+        onKeyPress={e => {
+          if (e.key === 'Enter') {
+            send()
+          }
+        }}
+      />
+      <div className="Input__Icon">
+        {text ?
+          <i
+            className="Input__Icon--Send material-icons"
+            onClick={send}
+          >send</i> :
+          <i className="Input__Icon--Mic material-icons">mic</i>
         }
-    }}/>
-            <div className="Input__Icon">
-                {text ?
-        <i className="Input__Icon--Send material-icons" onClick={send}>send</i> :
-        <i className="Input__Icon--Mic material-icons">mic</i>}
-                <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-            </div>
-        </div>);
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+      </div>
+    </div>
+  )
 }
-exports.default = InputField;

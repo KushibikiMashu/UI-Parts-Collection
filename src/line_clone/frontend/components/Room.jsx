@@ -1,16 +1,16 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var React = require("react");
-require("./Room.scss");
-var MessageList_1 = require("./MessageList");
-var InputField_1 = require("./InputField");
-var Reducer_1 = require("../Reducer");
-var Context_1 = require("../Context");
-function Room() {
-    var _a = React.useReducer(Reducer_1.Reducer, { messages: [] }), state = _a[0], dispatch = _a[1];
-    return (<Context_1.MessageContext.Provider value={{ state: state, dispatch: dispatch }}>
-            <MessageList_1.default />
-            <InputField_1.default />
-        </Context_1.MessageContext.Provider>);
+import * as React from "react"
+import './Room.scss'
+import MessageList from './MessageList'
+import InputField from './InputField'
+import { reducer } from "../reducer"
+import { MessageContext } from '../Context'
+
+export default function Room() {
+  const [state, dispatch] = React.useReducer(reducer, {messages: []})
+  return <>
+    <MessageContext.Provider value={{state, dispatch}}>
+      <MessageList/>
+      <InputField/>
+    </MessageContext.Provider>
+  </>
 }
-exports.default = Room;

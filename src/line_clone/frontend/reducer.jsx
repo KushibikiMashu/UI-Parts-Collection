@@ -1,19 +1,24 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-function Reducer(state, action) {
-    switch (action.type) {
-        case 'SEND_MESSAGE':
-            var message = action.message, time = action.time;
-            return Object.assign({}, state, {
-                messages: state.messages.concat({
-                    userName: "self",
-                    body: message,
-                    time: time,
-                    image: null,
-                })
-            });
-        default:
-            throw new Error();
-    }
+import * as React from 'react'
+
+export const reducer = (state, action) => {
+  switch (action.type) {
+    case 'SEND_MESSAGE':
+      const {body, time} = action.payload
+      const ocj = Object.assign({}, state, {
+        messages: state.messages.concat({
+          body,
+          time,
+        })
+      })
+      console.log(ocj);
+      return Object.assign({}, state, {
+        messages: state.messages.concat({
+          userName: 'self',
+          body,
+          time,
+        })
+      })
+    default:
+      throw new Error()
+  }
 }
-exports.Reducer = Reducer;

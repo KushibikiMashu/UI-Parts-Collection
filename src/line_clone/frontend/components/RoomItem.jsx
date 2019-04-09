@@ -1,10 +1,9 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var React = require("react");
-require("./RoomItem.scss");
-function ChatRoomItem(_a) {
-    var roomName = _a.roomName, description = _a.description, time = _a.time, newPostCount = _a.newPostCount, img = _a.img;
-    return (<div className="RoomItem">
+import * as React from "react";
+import './RoomItem.scss'
+
+export default function RoomItem({roomName, description, time, newPostCount, img}) {
+  return (
+    <div className="RoomItem">
       <div className="RoomItem__Left">
         <img className="RoomItem__Image" src={img} alt="logo"/>
       </div>
@@ -16,6 +15,6 @@ function ChatRoomItem(_a) {
         <p className="RoomItem__Time">{time}</p>
         {newPostCount !== "0" && <p className="RoomItem__Badge">{newPostCount}</p>}
       </div>
-    </div>);
+    </div>
+  )
 }
-exports.default = ChatRoomItem;

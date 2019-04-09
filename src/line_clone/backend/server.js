@@ -8,11 +8,21 @@ app.use(bodyParser.json())
 
 app.listen(3005)
 
-app.get('/', (req, res) => {
-  res.send('Hello World')
+// GETでメッセージを取得
+app.get('/messages/list', (req, res) => {
+
+  const json = JSON.stringify({
+    userName: "self",
+    body: "Creating clone app of LINE.",
+    time: "午後 15:00",
+    image: null,
+
+  })
+  res.send(json)
 })
 
-app.post('/', (req, res) => {
+
+app.post('/messages', (req, res) => {
   res.send('Hello World')
 })
 
