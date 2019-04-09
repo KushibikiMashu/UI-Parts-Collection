@@ -8,10 +8,15 @@ const db = low(adapter)
 db.defaults({messages: []})
   .write()
 
+function readMessages(){
+  return db.get('messages').value();
+}
+module.exports.insertMessage = insertMessage;
+
 function insertMessage(obj) {
   db.get('messages')
     .push(obj)
     .write()
 }
 
-module.exports.insertMessage = insertMessage;
+module.exports.readMessages = readMessages;

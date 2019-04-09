@@ -18,7 +18,7 @@ app.listen(3005)
 
 // GETでメッセージを取得
 app.get('/messages/list', (req, res) => {
-  res.send('You got it.')
+  res.send(api.readMessages())
 })
 
 // POSTリクエスト
