@@ -1,3 +1,24 @@
 {
-  "messages": []
+  "messages": [
+    {
+      "userName": "self",
+      "body": "api test",
+      "time": "today"
+    },
+    {
+      "userName": "self",
+      "body": "api test",
+      "time": "today"
+    },
+    {
+      "userName": "self",
+      "body": "api test",
+      "time": "today"
+    },
+    {
+      "userName": "self",
+      "body": "api test",
+      "time": "today"
+    }
+  ]
 }

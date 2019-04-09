@@ -1,5 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
+const api = require('./api.js')
 
 const app = express();
 
@@ -10,20 +11,15 @@ app.listen(3005)
 
 // GETでメッセージを取得
 app.get('/messages/list', (req, res) => {
-
-  const json = JSON.stringify({
-    userName: "self",
-    body: "Creating clone app of LINE.",
-    time: "午後 15:00",
-    image: null,
-
-  })
-  res.send(json)
+  res.send('You got it.')
 })
 
 
+// POSTリクエスト
+// curl -X POST -H "Content-Type: application/json" -d '{"userName": "self", "body": "api test", "time": "today"}' 127.0.0.1:3005/messages
 app.post('/messages', (req, res) => {
-  res.send('Hello World')
+  api.insertMessage(req.body);
+  res.send('OK')
 })
 
 console.log("Server is working!")
