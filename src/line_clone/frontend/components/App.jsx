@@ -8,15 +8,7 @@ export default function App() {
   return (
     <Router>
       <div className="Main">
-        <ul>
-          <li>
-            <Link to="/">list</Link>
-          </li>
-          <li>
-            <Link to="/room">room</Link>
-          </li>
-        </ul>
-        <Route path="/" component={RoomList}/>
+        <Link to="/room"><RoomList/></Link>
         <Route path="/room" component={Room}/>
       </div>
     </Router>
