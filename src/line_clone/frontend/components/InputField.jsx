@@ -24,8 +24,9 @@ export default function InputField() {
     }
 
     dispatch({
-      type: 'SEND_MESSAGE',
+      type: 'ADD_MESSAGE',
       payload: {
+        userName: 'self',
         body: message,
         time: getTime(),
       }
