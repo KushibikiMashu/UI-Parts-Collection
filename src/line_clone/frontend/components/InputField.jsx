@@ -24,7 +24,7 @@ export default function InputField() {
     }
 
     dispatch({
-      type: 'ADD_MESSAGE',
+      type: 'SEND_MESSAGE',
       payload: {
         userName: 'self',
         body: message,
