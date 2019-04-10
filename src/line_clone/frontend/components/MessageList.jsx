@@ -27,6 +27,7 @@ export default function MessageList() {
         <MyMessage {...item} key={item.id}/> :
         <OtherMessage {...item} key={item.id}/>
     })
+
   return (
     <>
       {allMessages}

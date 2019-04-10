@@ -2,8 +2,7 @@ import * as React from "react"
 import './InputField.scss'
 import { MessageContext } from '../Context'
 import axios from "axios";
-
-const moment = require('moment')
+import moment from 'moment'
 
 // helper関数
 function getTime() {
