@@ -23,9 +23,10 @@ app.get('/messages/list', (req, res) => {
 
 // POSTリクエスト
 // curl -X POST -H "Content-Type: application/json" -d '{"userName": "self", "body": "api test", "time": "today"}' 127.0.0.1:3005/messages
-app.post('/messages', (req, res) => {
-  api.insertMessage(req.body);
-  res.send('OK')
+app.post('/messages/post', (req, res) => {
+  const message = api.insertMessage(req.body);
+  // responseで登録したメッセージを返却する（IDつき）
+  res.send(message)
 })
 
 console.log("Server is working!")

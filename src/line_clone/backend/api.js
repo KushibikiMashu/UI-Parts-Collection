@@ -6,6 +6,11 @@ const db = low(adapter)
 
 const lodashId = require('lodash-id')
 db._.mixin(lodashId)
+db._.mixin({
+  latest: array => {
+    return array[array.length - 1]
+  }
+})
 
 const collection = db
   .defaults({messages: []})
@@ -15,15 +20,21 @@ const collection = db
 db.defaults({messages: []})
   .write()
 
-function readMessages(){
+function readMessages() {
   return db.get('messages').value();
 }
+
 module.exports.insertMessage = insertMessage;
 
 function insertMessage(obj) {
-  // created_atを追加
+  obj.created_at = new Date()
   collection
     .insert(obj)
     .write()
+
+  return db.get('messages')
+    .latest()
+    .value()
 }
+
 module.exports.readMessages = readMessages;

@@ -10,13 +10,14 @@ export default function MessageList() {
 
   React.useEffect(() => {
     axios.get('http://localhost:3005/messages/list')
-      .then(function (res) {
+      .then(res => {
         dispatch({
           type: 'RECEIVE_MESSAGES',
-          messages: res.data,
+          payload: res.data,
         })
-      }).catch(function (err) {
-      console.log(err)
+      }).catch(err => {
+      const {status, statusText} = err.response;
+      console.log(`Error! HTTP Status: ${status} ${statusText}`);
     });
   }, [])
 

@@ -1,6 +1,7 @@
 import * as React from "react"
 import './InputField.scss'
 import { MessageContext } from '../Context'
+import axios from "axios";
 
 const moment = require('moment')
 
@@ -13,26 +14,34 @@ function getTime() {
 
 export default function InputField() {
   const [text, setText] = React.useState('')
+  const [clicked, watchClicked] = React.useState(false)
   const setTextCallback = React.useCallback(e => setText(e.target.value), [text])
   const {dispatch} = React.useContext(MessageContext)
 
-  function send() {
+  React.useEffect(() => {
     const message = text.trim()
     if (message === '') {
       setText('')
       return
     }
 
-    dispatch({
-      type: 'SEND_MESSAGE',
-      payload: {
-        userName: 'self',
-        body: message,
-        time: getTime(),
-      }
-    })
+    axios.post('http://localhost:3005/messages/post', {
+      userName: 'self',
+      body: message,
+      time: getTime(),
+    }).then(res => {
+      dispatch({
+        type: 'ADD_MESSAGE',
+        payload: res.data
+      })
+    }).catch(err => {
+      const {status, statusText} = err.response;
+      console.log(`Error! HTTP Status: ${status} ${statusText}`);
+    });
+
     setText('')
-  }
+
+  }, [clicked])
 
   return (
     <div className="Input">
@@ -43,7 +52,7 @@ export default function InputField() {
         onChange={setTextCallback}
         onKeyPress={e => {
           if (e.key === 'Enter') {
-            send()
+            watchClicked(!clicked)
           }
         }}
       />
@@ -51,7 +60,7 @@ export default function InputField() {
         {text ?
           <i
             className="Input__Icon--Send material-icons"
-            onClick={send}
+            onClick={() => watchClicked(!clicked)}
           >send</i> :
           <i className="Input__Icon--Mic material-icons">mic</i>
         }
