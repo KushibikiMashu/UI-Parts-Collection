@@ -1,16 +1,16 @@
 import * as React from 'react'
 import './App.scss'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import RoomList from './RoomList'
-import Room from './Room'
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Room from "./Room";
+import RoomList from "./RoomList";
 
 export default function App() {
   return (
-    <Router>
       <div className="Main">
-        <Link to="/room"><RoomList/></Link>
-        <Route path="/room" component={Room}/>
+        <Router>
+          <Route exact path="/" component={RoomList}/>
+          <Route path="/room" component={Room}/>
+        </Router>
       </div>
-    </Router>
   )
 }

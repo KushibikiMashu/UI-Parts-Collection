@@ -1,7 +1,7 @@
 const low = require('lowdb')
 const FileSync = require('lowdb/adapters/FileSync')
 
-const adapter = new FileSync('src/line_clone/database/chat.json')
+const adapter = new FileSync('../database/chat.json')
 const db = low(adapter)
 
 const lodashId = require('lodash-id')

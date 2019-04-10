@@ -4,6 +4,7 @@ const angularLogo = require('../image/angular-logo.svg')
 
 export const roomItems = [
   {
+    id: 1,
     roomName: "React.js",
     description: "React & StorybookでLINEのUIを模写する",
     time: "午前 11:18",
@@ -11,6 +12,7 @@ export const roomItems = [
     img: reactLogo
   },
   {
+    id: 2,
     roomName: "Vue.js",
     description: " Vue.jsのルームです",
     time: "午前 7:08",
@@ -18,6 +20,7 @@ export const roomItems = [
     img: vueLogo
   },
   {
+    id: 3,
     roomName: "AngularJS",
     description: " AngularJSのルームです",
     time: "昨日",
@@ -53,8 +56,6 @@ export const messageItems = [
     userName: "self",
     body: "Creating clone app of LINE.",
     time: "午後 15:00",
-    // image:nullの行は削除してok?
-    // 型を ?stringにしているので
     image: null,
   },
 ]
