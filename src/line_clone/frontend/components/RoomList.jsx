@@ -1,24 +1,16 @@
 import * as React from "react"
 import RoomItem from './RoomItem'
 import { roomItems } from '../data'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Room from "./Room";
+import { Link } from "react-router-dom";
 
-export default function ChatRoom() {
+export default function RoomList() {
+  const allMessage = roomItems.map(item => (
+    <Link to="/room">
+      <RoomItem {...item} key={item.id}/>
+    </Link>
+  ))
+
   return <>
-    {roomItems.map(item => (
-      <Link to="/room">
-        <RoomItem {...item} key={item.id}/>
-      </Link>
-    ))}
+    {allMessage}
   </>
 }
-
-// export default function RoomList() {
-//   return (
-//     <Router>
-//       <Route exact path="/" component={ChatRoom}/>
-//       <Route path="/room" component={Room}/>
-//     </Router>
-//   )
-// }
