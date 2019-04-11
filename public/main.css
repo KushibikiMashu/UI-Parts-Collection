@@ -5,43 +5,43 @@ li {
 /*
  * ヘッダー
  */
-.Header {
+.header {
   height: 72px;
   width: 100%;
   display: flex;
   background-color: #EDF2F7;
   border-bottom: solid 1px #E2E8F0; }
-  .Header__Left {
+  .header__left {
     width: 120px;
     margin: 0 12px;
     padding: 16px 0;
     display: flex; }
-  .Header__Logo--Image {
+  .header__Logo--image {
     width: 40px;
     height: 40px; }
-  .Header__Logo--Name {
+  .header__Logo--name {
     padding-left: 8px;
     font-size: 30px; }
-  .Header__Menu {
+  .header__menu {
     width: 480px;
     margin-left: 36px;
     display: flex;
     text-decoration: none; }
-    .Header__Menu li {
+    .header__menu li {
       padding: 32px 8px; }
-  .Header__Right {
+  .header__right {
     width: 100px;
     margin-left: auto;
     margin-right: 20px;
     padding: 16px 0;
     display: flex; }
-  .Header__Icon--Avatar {
+  .header__icon--Avatar {
     width: 40px;
     height: 40px;
     margin-left: 4px;
     border: 1px solid #E2E8F0;
     border-radius: 50%; }
-  .Header__Icon--Bell {
+  .header__icon--bell {
     padding: 4px 8px;
     border: 1px solid #E2E8F0;
     border-radius: 50%; }
@@ -49,20 +49,20 @@ li {
 /*
  * Main
  */
-.Main {
+.main {
   margin: 10px 12px; }
 
 /*
  * ダッシュボード
  */
-.Dashboard {
+.dashboard {
   padding-top: 20px;
   padding-bottom: 40px;
   border-radius: 12px; }
-  .Dashboard__Row {
+  .dashboard__row {
     display: flex;
     justify-content: center; }
-  .Dashboard__Board, .Dashboard__Board--StockAmount, .Dashboard__Board--ShareholdersAmount, .Dashboard__Board--StockPrice, .Dashboard__Board--StockShare, .Dashboard__Board--MainShareholders, .Dashboard__Board--ShareholdersTransition {
+  .dashboard__board, .dashboard__board--stockAmount, .dashboard__board--shareholdersAmount, .dashboard__board--stockPrice, .dashboard__board--stockShare, .dashboard__board--mainshareholders, .dashboard__board--shareholdersTransition {
     width: 16rem;
     min-width: 16rem;
     height: 12rem;
@@ -74,54 +74,54 @@ li {
     color: #FFFFFF;
     font-weight: bold;
     border-radius: 4px; }
-    .Dashboard__Board--StockAmount {
+    .dashboard__board--stockAmount {
       font-size: 32px;
       background-color: #23c6f8; }
-    .Dashboard__Board--ShareholdersAmount {
+    .dashboard__board--shareholdersAmount {
       font-size: 32px;
       background-color: #70eeba; }
-    .Dashboard__Board--StockPrice {
+    .dashboard__board--stockPrice {
       font-size: 32px;
       background-color: #6f69e7; }
-    .Dashboard__Board--MainShareholders {
+    .dashboard__board--mainshareholders {
       flex-direction: column;
       font-size: 16px;
       background-color: #fa4563; }
-    .Dashboard__Board--MainShareholders span {
+    .dashboard__board--mainshareholders span {
       float: right; }
 
 /*
- * Shareholders
+ * shareholders
  */
-.Shareholders {
+.shareholders {
   margin: 80px 0; }
-  .Shareholders__Table {
+  .shareholders__table {
     width: 72%;
     margin: 0 auto;
     padding: 0 20px;
     background-color: #F7FAFC;
     border: 1px solid #CBD5E0; }
-  .Shareholders__Heading {
+  .shareholders__heading {
     border: 1px solid #CBD5E0; }
-    .Shareholders__Heading-Icon {
+    .shareholders__heading-icon {
       width: 50px;
       padding-left: 16px; }
-    .Shareholders__Heading-Name {
+    .shareholders__heading-name {
       width: 200px;
       text-align: center; }
-    .Shareholders__Heading-StockAmount {
+    .shareholders__heading-stockAmount {
       width: 120px;
       text-align: right; }
-    .Shareholders__Heading-StockShare {
+    .shareholders__heading-stockShare {
       width: 100px;
       padding-right: 28px;
       text-align: right; }
-  .Shareholders__Icon {
+  .shareholders__icon {
     padding-left: 16px;
     text-align: center; }
-  .Shareholders__StockAmount {
+  .shareholders__stockAmount {
     text-align: right; }
-  .Shareholders__StockShare {
+  .shareholders__stockShare {
     padding-right: 16px;
     text-align: right; }
 
@@ -140,7 +140,7 @@ li {
   .footer__list {
     width: 100%;
     padding-top: 4px;
-    padding-right: 32px;
+    padding-right: 48px;
     text-align: right; }
 
 /*# sourceMappingURL=main.css.map */

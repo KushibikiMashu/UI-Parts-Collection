@@ -5,31 +5,31 @@ li {
 /*
  * ヘッダー
  */
-.Header {
+.header {
   height: 72px;
   width: 100%;
   display: flex;
   background-color: #EDF2F7;
   border-bottom: solid 1px #E2E8F0;
 
-  &__Left {
+  &__left {
     width: 120px;
     margin: 0 12px;
     padding: 16px 0;
     display: flex;
   }
 
-  &__Logo--Image {
+  &__Logo--image {
     width: 40px;
     height: 40px;
   }
 
-  &__Logo--Name {
+  &__Logo--name {
     padding-left: 8px;
     font-size: 30px;
   }
 
-  &__Menu {
+  &__menu {
     width: 480px;
     margin-left: 36px;
     display: flex;
@@ -40,7 +40,7 @@ li {
     }
   }
 
-  &__Right {
+  &__right {
     width: 100px;
     margin-left: auto;
     margin-right: 20px;
@@ -48,7 +48,7 @@ li {
     display: flex;
   }
 
-  &__Icon--Avatar {
+  &__icon--Avatar {
     width: 40px;
     height: 40px;
     margin-left: 4px;
@@ -56,7 +56,7 @@ li {
     border-radius: 50%;
   }
 
-  &__Icon--Bell {
+  &__icon--bell {
     padding: 4px 8px;
     border: 1px solid #E2E8F0;
     border-radius: 50%;
@@ -66,7 +66,7 @@ li {
 /*
  * Main
  */
-.Main {
+.main {
   margin: 10px 12px;
 }
 
@@ -74,17 +74,17 @@ li {
 /*
  * ダッシュボード
  */
-.Dashboard {
+.dashboard {
   padding-top: 20px;
   padding-bottom: 40px;
   border-radius: 12px;
 
-  &__Row {
+  &__row {
     display: flex;
     justify-content: center;
   }
 
-  &__Board {
+  &__board {
     width: 16rem;
     min-width: 16rem;
     height: 12rem;
@@ -98,54 +98,54 @@ li {
     font-weight: bold;
     border-radius: 4px;
 
-    &--StockAmount {
-      @extend .Dashboard__Board;
+    &--stockAmount {
+      @extend .dashboard__board;
       font-size: 32px;
       background-color: #23c6f8;
     }
 
-    &--ShareholdersAmount {
-      @extend .Dashboard__Board;
+    &--shareholdersAmount {
+      @extend .dashboard__board;
       font-size: 32px;
       background-color: #70eeba;
 
     }
 
-    &--StockPrice {
-      @extend .Dashboard__Board;
+    &--stockPrice {
+      @extend .dashboard__board;
       font-size: 32px;
       background-color: #6f69e7;
 
     }
 
-    &--StockShare {
-      @extend .Dashboard__Board;
+    &--stockShare {
+      @extend .dashboard__board;
     }
 
-    &--MainShareholders {
-      @extend .Dashboard__Board;
+    &--mainshareholders {
+      @extend .dashboard__board;
       flex-direction: column;
       font-size: 16px;
       background-color: #fa4563;
     }
 
-    &--MainShareholders span{
+    &--mainshareholders span{
       float: right;
     }
-      &--ShareholdersTransition {
-      @extend .Dashboard__Board;
+      &--shareholdersTransition {
+      @extend .dashboard__board;
     }
   }
 }
 
 /*
- * Shareholders
+ * shareholders
  */
 
-.Shareholders {
+.shareholders {
   margin: 80px 0;
 
-  &__Table {
+  &__table {
     width: 72%;
     margin: 0 auto;
     padding: 0 20px;
@@ -155,44 +155,44 @@ li {
     &-Body{}
   }
 
-  &__Heading {
+  &__heading {
     border: 1px solid #CBD5E0;
 
-    &-Icon{
+    &-icon{
       width: 50px;
       padding-left: 16px;
     }
 
-    &-Name{
+    &-name{
       width: 200px;
       text-align: center;
     }
 
-    &-StockAmount{
+    &-stockAmount{
       width: 120px;
       text-align: right;
     }
 
-    &-StockShare{
+    &-stockShare{
       width: 100px;
       padding-right: 28px;
       text-align: right;
     }
   }
 
-  &__Icon{
+  &__icon{
     padding-left: 16px;
     text-align: center;
   }
 
-  &__Name{
+  &__name{
   }
 
-  &__StockAmount{
+  &__stockAmount{
     text-align: right;
   }
 
-  &__StockShare{
+  &__stockShare{
     padding-right: 16px;
     text-align: right;
   }
@@ -216,7 +216,7 @@ li {
   &__list{
     width: 100%;
     padding-top: 4px;
-    padding-right: 32px;
+    padding-right: 48px;
     text-align: right;
 
     &-menu {
