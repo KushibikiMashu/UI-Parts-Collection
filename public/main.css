@@ -1,19 +1,26 @@
+@charset "UTF-8";
 li {
   list-style: none; }
 
+/*
+ * ヘッダー
+ */
 .Header {
   height: 72px;
+  width: 100%;
   display: flex;
-  background-color: #EDF2F7; }
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: solid 1px #E2E8F0; }
   .Header__Left {
     width: 120px;
     margin: 0 12px;
     padding: 16px 0;
     display: flex; }
-  .Header__Logo-Image {
+  .Header__Logo--Image {
     width: 40px;
     height: 40px; }
-  .Header__Logo-Name {
+  .Header__Logo--Name {
+    padding-left: 8px;
     font-size: 30px; }
   .Header__Menu {
     width: 480px;
@@ -25,13 +32,28 @@ li {
   .Header__Right {
     width: 100px;
     margin-left: auto;
+    margin-right: 20px;
     padding: 16px 0;
     display: flex; }
-  .Header__Icon-Avatar {
+  .Header__Icon--Avatar {
     width: 40px;
     height: 40px;
+    margin-left: 4px;
+    border: 1px solid #E2E8F0;
     border-radius: 50%; }
-  .Header__Icon-Bell {
-    padding: 4px 10px; }
+  .Header__Icon--Bell {
+    padding: 4px 8px;
+    border: 1px solid #E2E8F0;
+    border-radius: 50%; }
+
+/*
+ * ダッシュボード
+ */
+.Dashboard {
+  margin: 20px 40px;
+  display: flex; }
+  .Dashboard__Board {
+    width: 33%;
+    border: #1a202c 1px solid; }
 
 /*# sourceMappingURL=main.css.map */
