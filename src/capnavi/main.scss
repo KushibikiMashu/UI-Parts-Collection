@@ -9,7 +9,7 @@ li {
   height: 72px;
   width: 100%;
   display: flex;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: #EDF2F7;
   border-bottom: solid 1px #E2E8F0;
 
   &__Left {
@@ -75,8 +75,9 @@ li {
  * ダッシュボード
  */
 .Dashboard {
-  margin-top: 20px;
-  margin-bottom: 40px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  border-radius: 12px;
 
   &__Row {
     display: flex;
@@ -142,7 +143,7 @@ li {
  */
 
 .Shareholders {
-  margin: 20px 0;
+  margin: 80px 0;
 
   &__Table {
     width: 72%;
@@ -194,5 +195,31 @@ li {
   &__StockShare{
     padding-right: 16px;
     text-align: right;
+  }
+}
+
+/*
+ * footer
+ */
+.footer {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  background-color: #E2E8F0;
+
+  &__logo{
+    padding-left: 24px;
+    font-size: 32px;
+    line-height: 80px;
+  }
+
+  &__list{
+    width: 100%;
+    padding-top: 4px;
+    padding-right: 32px;
+    text-align: right;
+
+    &-menu {
+    }
   }
 }
