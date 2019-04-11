@@ -36,39 +36,43 @@
   <!-- Main -->
   <div class="Main">
     <div class="Dashboard">
-      <div class="Dashboard__Board">
-        <div class="Dashboard__Board--StockAmount">
-          234,520,300株
+      <div class="Dashboard__Row">
+        <div class="Dashboard__Board">
+          <div class="Dashboard__Board--StockAmount">
+            234,520,300株
+          </div>
+        </div>
+        <div class="Dashboard__Board">
+          <div class="Dashboard__Board--ShareholdersAmount">
+            株主等　47名
+          </div>
+        </div>
+        <div class="Dashboard__Board">
+          <div class="Dashboard__Board--StockPrice">
+            株価　￥1,365
+          </div>
         </div>
       </div>
-      <div class="Dashboard__Board">
-        <div class="Dashboard__Board--ShareholdersAmount">
-          株主等　47名
+      <div class="Dashboard__Row">
+        <div class="Dashboard__Board">
+          <div class="Dashboard__Board--StockShare">
+            <canvas id="stock_share" height="240"></canvas>
+          </div>
         </div>
-      </div>
-      <div class="Dashboard__Board">
-        <div class="Dashboard__Board--StockPrice">
-          株価　￥1,365
+        <div class="Dashboard__Board">
+          <div class="Dashboard__Board--MainShareholders">
+            <p></p>
+            <p><i class="fab fa-alipay"></i>柿本人麻呂（代表取締役） <span style="float: right">42.64%</span></p>
+            <p><i class="fas fa-atom"></i>松尾芭蕉（取締役）<span style="float: right">19.19%</span></p>
+            <p><i class="fas fa-bible"></i>YJ1号投資事業組合<span style="float: right">12.79%</span></p>
+            <p><i class="fab fa-apple"></i>折口信夫（社外取締役）<span style="float: right">10.66%</span></p>
+            <p><i class="fab fa-canadian-maple-leaf"></i>その他<span style="float: right">14.72%</span></p>
+          </div>
         </div>
-      </div>
-      <div class="Dashboard__Board">
-        <div class="Dashboard__Board--StockShare">
-          <canvas id="stock_share" height="240"></canvas>
-        </div>
-      </div>
-      <div class="Dashboard__Board">
-        <div class="Dashboard__Board--MainShareholders">
-          <p></p>
-          <p><i class="fab fa-alipay"></i>柿本人麻呂（代表取締役） <span style="float: right">42.64%</span></p>
-          <p><i class="fas fa-atom"></i>松尾芭蕉（取締役）<span style="float: right">19.19%</span></p>
-          <p><i class="fas fa-bible"></i>YJ1号投資事業組合<span style="float: right">12.79%</span></p>
-          <p><i class="fab fa-apple"></i>折口信夫（社外取締役）<span style="float: right">10.66%</span></p>
-          <p><i class="fab fa-canadian-maple-leaf"></i>その他<span style="float: right">14.72%</span></p>
-        </div>
-      </div>
-      <div class="Dashboard__Board">
-        <div class="Dashboard__Board--ShareholdersTransition">
-          <canvas id="stock_transition" height="240"></canvas>
+        <div class="Dashboard__Board">
+          <div class="Dashboard__Board--ShareholdersTransition">
+            <canvas id="stock_transition" height="240"></canvas>
+          </div>
         </div>
       </div>
     </div>

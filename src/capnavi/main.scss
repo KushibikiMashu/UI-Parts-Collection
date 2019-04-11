@@ -37,7 +37,7 @@ li {
     text-decoration: none;
 
     li {
-      padding: 30px 8px;
+      padding: 16px 8px;
     }
   }
 
@@ -70,11 +70,24 @@ li {
 
 .Dashboard {
   margin: 20px 40px;
-  display: flex;
+
+  &__Row {
+    display: flex;
+  }
 
   &__Board {
-    width: 33%;
+    width: 16rem;
+    min-width: 16rem;
+    height: 12rem;
+    max-height: 12rem;
+    margin: 8px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
     border: #1a202c 1px solid;
+    border-radius: 4px;
+
 
     &--StockAmount {
 
@@ -89,6 +102,7 @@ li {
 
     }
     &--MainShareholders {
+      font-size: 16px;
 
     }
     &--ShareholdersTransition {

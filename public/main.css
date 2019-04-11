@@ -28,7 +28,7 @@ li {
     display: flex;
     text-decoration: none; }
     .Header__Menu li {
-      padding: 30px 8px; }
+      padding: 16px 8px; }
   .Header__Right {
     width: 100px;
     margin-left: auto;
@@ -50,10 +50,22 @@ li {
  * ダッシュボード
  */
 .Dashboard {
-  margin: 20px 40px;
-  display: flex; }
+  margin: 20px 40px; }
+  .Dashboard__Row {
+    display: flex; }
   .Dashboard__Board {
-    width: 33%;
-    border: #1a202c 1px solid; }
+    width: 16rem;
+    min-width: 16rem;
+    height: 12rem;
+    max-height: 12rem;
+    margin: 8px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    border: #1a202c 1px solid;
+    border-radius: 4px; }
+    .Dashboard__Board--MainShareholders {
+      font-size: 16px; }
 
 /*# sourceMappingURL=main.css.map */
