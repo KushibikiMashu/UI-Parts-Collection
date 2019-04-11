@@ -1,0 +1,30 @@
+li {
+  list-style: none; }
+
+.Header {
+  height: 80px;
+  display: flex;
+  background-color: #EDF2F7; }
+  .Header__Left {
+    width: 200px;
+    display: flex; }
+  .Header__Logo-Image {
+    width: 40px;
+    height: 40px; }
+  .Header__Logo-Name {
+    font-size: 30px; }
+  .Header__Menu {
+    width: 600px;
+    display: flex;
+    text-decoration: none; }
+    .Header__Menu li {
+      padding: 30px 8px; }
+  .Header__Right {
+    width: 100px;
+    text-align: right; }
+  .Header__Icon-Avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; }
+
+/*# sourceMappingURL=main.css.map */

@@ -8,19 +8,19 @@
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json"/>
   <meta charset="utf-8">
   <title>CapNavi</title>
-  <link rel="stylesheet" href="../src/capnavi/main.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link href="https://unpkg.com/tailwindcss@next/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
   <div class="Header">
-    <div class="Header__Logo">
-      <img src="../src/capnavi/logo_final.svg">
-      CapNavi
+    <div class="Header__Left">
+      <img class="Header__Logo-Image" src="logo_final.svg">
+      <span class="Header__Logo-Name">CapNavi</span>
     </div>
-    <div class="Header__List">
-      <ul>
+    <div>
+      <ul class="Header__Menu">
         <li>資本政策表</li>
         <li>取締役会</li>
         <li>ストックオプション</li>
@@ -28,12 +28,8 @@
       </ul>
     </div>
     <div class="Header__Right"></div>
-    <div class="Header__Icon-User">
-      <img src="../src/capnavi/man.jpg" alt="user">
-    </div>
-    <div class="Header__Icon-Bell">
       <i class="far fa-bell fa-2x"></i>
-    </div>
+      <img class="Header__Icon-Avatar" src="man.jpg" alt="user">
   </div>
 
   <div class="main">

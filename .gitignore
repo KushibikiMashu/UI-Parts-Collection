@@ -24,3 +24,5 @@ yarn-error.log*
 
 .idea
 database/*.json
+src/capnavi/.sass-cache/
+*.map

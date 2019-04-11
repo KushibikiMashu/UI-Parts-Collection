@@ -1,23 +1,54 @@
-.Header{
+li {
+  list-style: none;
+}
+
+.Header {
+  height: 80px;
   display: flex;
+
+  background-color: #EDF2F7;
+
+  &__Left {
+    width: 200px;
+
+    display: flex;
+  }
+
+  &__Logo-Image {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__Logo-Name {
+    font-size: 30px;
+  }
+
+  &__Menu {
+    width: 600px;
+    display: flex;
+    text-decoration: none;
+
+    li {
+      padding: 30px 8px;
+    }
+  }
+
+  &__Right {
+    width: 100px;
+    text-align: right;
+  }
+
+  &__Icon {
+
+    &-Avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    &-Bell {
+
+    }
+  }
 }
 
-.Header__Logo{
-
-}
-
-.Header__List{
-
-}
-
-.Header__Right{
-
-}
-
-.Header__Icon-User{
-
-}
-
-.Header__Icon-Bell{
-
-}
