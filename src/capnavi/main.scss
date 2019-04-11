@@ -5,7 +5,6 @@ li {
 /*
  * ヘッダー
  */
-
 .Header {
   height: 72px;
   width: 100%;
@@ -65,14 +64,23 @@ li {
 }
 
 /*
+ * Main
+ */
+.Main {
+  margin: 10px 12px;
+}
+
+
+/*
  * ダッシュボード
  */
-
 .Dashboard {
-  margin: 20px 40px;
+  margin-top: 20px;
+  margin-bottom: 40px;
 
   &__Row {
     display: flex;
+    justify-content: center;
   }
 
   &__Board {
@@ -126,5 +134,65 @@ li {
       &--ShareholdersTransition {
       @extend .Dashboard__Board;
     }
+  }
+}
+
+/*
+ * Shareholders
+ */
+
+.Shareholders {
+  margin: 20px 0;
+
+  &__Table {
+    width: 72%;
+    margin: 0 auto;
+    padding: 0 20px;
+    background-color: #F7FAFC;
+    border: 1px solid #CBD5E0;
+
+    &-Body{}
+  }
+
+  &__Heading {
+    border: 1px solid #CBD5E0;
+
+    &-Icon{
+      width: 50px;
+      padding-left: 16px;
+    }
+
+    &-Name{
+      width: 200px;
+      text-align: center;
+    }
+
+    &-StockAmount{
+      width: 120px;
+      text-align: right;
+    }
+
+    &-StockShare{
+      width: 100px;
+      padding-right: 28px;
+      text-align: right;
+    }
+  }
+
+  &__Icon{
+    padding-left: 16px;
+    text-align: center;
+  }
+
+  &__Name{
+  }
+
+  &__StockAmount{
+    text-align: right;
+  }
+
+  &__StockShare{
+    padding-right: 16px;
+    text-align: right;
   }
 }

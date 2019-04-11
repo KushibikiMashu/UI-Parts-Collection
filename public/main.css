@@ -47,12 +47,20 @@ li {
     border-radius: 50%; }
 
 /*
+ * Main
+ */
+.Main {
+  margin: 10px 12px; }
+
+/*
  * ダッシュボード
  */
 .Dashboard {
-  margin: 20px 40px; }
+  margin-top: 20px;
+  margin-bottom: 40px; }
   .Dashboard__Row {
-    display: flex; }
+    display: flex;
+    justify-content: center; }
   .Dashboard__Board, .Dashboard__Board--StockAmount, .Dashboard__Board--ShareholdersAmount, .Dashboard__Board--StockPrice, .Dashboard__Board--StockShare, .Dashboard__Board--MainShareholders, .Dashboard__Board--ShareholdersTransition {
     width: 16rem;
     min-width: 16rem;
@@ -80,5 +88,40 @@ li {
       background-color: #fa4563; }
     .Dashboard__Board--MainShareholders span {
       float: right; }
+
+/*
+ * Shareholders
+ */
+.Shareholders {
+  margin: 20px 0; }
+  .Shareholders__Table {
+    width: 72%;
+    margin: 0 auto;
+    padding: 0 20px;
+    background-color: #F7FAFC;
+    border: 1px solid #CBD5E0; }
+  .Shareholders__Heading {
+    border: 1px solid #CBD5E0; }
+    .Shareholders__Heading-Icon {
+      width: 50px;
+      padding-left: 16px; }
+    .Shareholders__Heading-Name {
+      width: 200px;
+      text-align: center; }
+    .Shareholders__Heading-StockAmount {
+      width: 120px;
+      text-align: right; }
+    .Shareholders__Heading-StockShare {
+      width: 100px;
+      padding-right: 28px;
+      text-align: right; }
+  .Shareholders__Icon {
+    padding-left: 16px;
+    text-align: center; }
+  .Shareholders__StockAmount {
+    text-align: right; }
+  .Shareholders__StockShare {
+    padding-right: 16px;
+    text-align: right; }
 
 /*# sourceMappingURL=main.css.map */
