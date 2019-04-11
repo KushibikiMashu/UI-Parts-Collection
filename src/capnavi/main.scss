@@ -3,14 +3,15 @@ li {
 }
 
 .Header {
-  height: 80px;
+  height: 72px;
   display: flex;
-
+  //変更する
   background-color: #EDF2F7;
 
   &__Left {
-    width: 200px;
-
+    width: 120px;
+    margin: 0 12px;
+    padding: 16px 0;
     display: flex;
   }
 
@@ -24,7 +25,8 @@ li {
   }
 
   &__Menu {
-    width: 600px;
+    width: 480px;
+    margin-left: 36px;
     display: flex;
     text-decoration: none;
 
@@ -35,20 +37,19 @@ li {
 
   &__Right {
     width: 100px;
-    text-align: right;
+    margin-left: auto;
+    padding: 16px 0;
+    display: flex;
   }
 
-  &__Icon {
+  &__Icon-Avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
 
-    &-Avatar {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-    }
-
-    &-Bell {
-
-    }
+  &__Icon-Bell {
+    padding: 4px 10px;
   }
 }
 
