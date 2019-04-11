@@ -1,41 +1,215 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta
+<html lang="ja">
+<head>
+  <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="theme-color" content="#000000" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+  />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json"/>
+  <meta charset="utf-8">
+  <title>CapNavi</title>
+  <link rel="stylesheet" href="../src/capnavi/main.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link href="https://unpkg.com/tailwindcss@next/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="Header">
+    <div class="Header__Logo">
+      <img src="../src/capnavi/logo_final.svg">
+      CapNavi
+    </div>
+    <div class="Header__List">
+      <ul>
+        <li>資本政策表</li>
+        <li>取締役会</li>
+        <li>ストックオプション</li>
+        <li>各種設定</li>
+      </ul>
+    </div>
+    <div class="Header__Right"></div>
+    <div class="Header__Icon-User">
+      <img src="../src/capnavi/man.jpg" alt="user">
+    </div>
+    <div class="Header__Icon-Bell">
+      <i class="far fa-bell fa-2x"></i>
+    </div>
+  </div>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+  <div class="main">
+    <div class="main-contents">
+      <div class="table">
+        <div class="stocks btn">
+          234,520,300株
+        </div>
+      </div>
+      <div class="table">
+        <div class="shareholders btn">
+          株主等　47名
+        </div>
+      </div>
+      <div class="table">
+        <div class="stockprice btn">
+          株価　￥1,365
+        </div>
+      </div>
+    </div>
+    <div class="main-contents">
+      <div class="table">
+        <div class="graph-1 btn">
+          <canvas id="stock_share" height="240"></canvas>
+        </div>
+      </div>
+      <div class="table">
+        <div class="shareholder-top5 btn">
+          <p></p>
+          <p><i class="fab fa-alipay"></i>柿本人麻呂（代表取締役） <span style="float: right">42.64%</span></p>
+          <p><i class="fas fa-atom"></i>松尾芭蕉（取締役）<span style="float: right">19.19%</span></p>
+          <p><i class="fas fa-bible"></i>YJ1号投資事業組合<span style="float: right">12.79%</span></p>
+          <p><i class="fab fa-apple"></i>折口信夫（社外取締役）<span style="float: right">10.66%</span></p>
+          <p><i class="fab fa-canadian-maple-leaf"></i>その他<span style="float: right">14.72%</span></p>
+        </div>
+      </div>
+      <div class="table">
+        <div class="graph-2 btn">
+          <canvas id="stock_transition" height="240"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="shareholders-li">
+      <div class="shareholder-list">
+        <p><i class="fab fa-alipay fa-2x"></i>柿本人麻呂（代表取締役） <span style="float: right">100,000,000株　42.64%</span>
+        </p>
+        <p><i class="fas fa-atom fa-2x"></i>松尾芭蕉（取締役）<span style="float: right">45,000,000株　19.19%</span></p>
+        <p><i class="fas fa-bible fa-2x"></i>YJ1号投資事業組合<span style="float: right">30,000,000株　12.79%</span></p>
+        <p><i class="fab fa-apple fa-2x"></i>折口信夫（社外取締役）<span style="float: right">25,000,000株　10.66%</span></p>
+        <p><i class="fab fa-canadian-maple-leaf fa-2x"></i>三井住友海上キャピタル<span style="float: right">7,500,000株　3.20%</span>
+        </p>
+        <p><i class="fas fa-robot fa-2x"></i>サイバーエージェント<span style="float: right">3,500,000株　1.49%</span></p>
+        <p><i class="fas fa-rocket fa-2x"></i>伊藤忠商事株式会社<span style="float: right">3,200,000株　1.36%</span></p>
+        <p><i class="fas fa-star fa-2x"></i>住友商事株式会社<span style="float: right">3,200,000株　1.36%</span></p>
+        <p><i class="fas fa-moon fa-2x"></i>三菱商事株式会社<span style="float: right">2,000,000株　0.85%</span></p>
+        <p><i class="fas fa-jedi fa-2x"></i>ストックオプション<span style="float: right">15,120,300個　6.45%</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer-logo">CapNavi</div>
+    <div class="footer-list">
+      <ul>
+        <li>サービスについて</li>
+        <li>会社概要</li>
+        <li>お問い合わせ</li>
+      </ul>
+    </div>
+  </div>
+</body>
+<script>
+  const stockShare = document.getElementById('stock_share').getContext('2d');
+  new Chart(stockShare, {
+    type: 'doughnut',
+    data: {
+      labels: ['柿本', '松尾', 'YJ', '折口', '三井住友', 'CA', 'その他'],
+      datasets: [{
+        label: 'doughnut',
+        data: [42, 19, 13, 11, 3, 2, 10],
+        backgroundColor: [
+          "#2ecc71",
+          "#3498db",
+          "#fa4563",
+          "#9b59b6",
+          "#f1c40f",
+          "#e74c3c",
+          "#95a5a6"]
+      },]
+    },
+    options: {
+      legend: {
+        display: false
+      }
+    }
+  });
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+  const stockTransition = document.getElementById('stock_transition').getContext('2d');
+  new Chart(stockTransition, {
+      type: 'bar',
+      data: {
+        labels: ['創業', 'シード', 'シリーズA', 'シリーズB'],
+        datasets: [
+          {
+            label: '柿本',
+            data: [70, 55, 50, 42.64],
+            backgroundColor: [
+              "#2ecc71",
+              "#2ecc71",
+              "#2ecc71",
+              "#2ecc71",
+              "#2ecc71"
+            ],
+            stack: 1,
+            fill: "origin"
+          },
+          {
+            label: '松尾',
+            data: [30, 24, 22, 19.19],
+            backgroundColor: [
+              "#3498db",
+              "#3498db",
+              "#3498db",
+              "#3498db",
+              "#3498db"],
+            stack: 1,
+            fill: "-1"
+          },
+          {
+            label: 'YJ',
+            data: [0, 18, 17, 12.79],
+            backgroundColor: [
+              "#fa4563",
+              "#fa4563",
+              "#fa4563",
+              "#fa4563",
+              "#fa4563"],
+            stack: 1,
+            fill: "-1"
+          },
+          {
+            label: '折口',
+            data: [0, 0, 0, 10.66],
+            backgroundColor: [
+              "#9b59b6",
+              "#9b59b6",
+              "#9b59b6",
+              "#9b59b6",
+              "#9b59b6"],
+            stack: 1,
+            fill: "-1"
+          },
+          {
+            label: 'その他',
+            data: [0, 3, 11, 14.72],
+            backgroundColor: [
+              "#95a5a6"
+            ],
+            stack: 1,
+            fill: "-1"
+          },
+        ]
+      },
+      options: {
+        legend: {
+          display: false
+        },
+        stacked: true
+      },
+      plugins: {
+        filler: {
+          propagate: true
+        }
+      }
+    }
+  );
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+</script>
 </html>
+
