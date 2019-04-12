@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+  <meta charset="utf-8">
+  <title>CapNavi</title>
+  <link rel="stylesheet" type="text/css" href="arrangement.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link href="https://unpkg.com/tailwindcss@next/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+</head>
+<body>
+  <!-- header -->
+  <div class="header">
+    <div class="header__left">
+      <img class="header__Logo--image" src="logo_final.svg">
+      <span class="header__Logo--name">CapNavi</span>
+    </div>
+    <ul class="header__menu">
+      <li>資本政策表</li>
+      <li>取締役会</li>
+      <li>ストックオプション</li>
+      <li>各種設定</li>
+    </ul>
+    <div class="header__right">
+      <i class="far fa-bell fa-2x header__icon--bell"></i>
+      <img class="header__icon--Avatar" src="man.jpg" alt="user">
+    </div>
+  </div>
+  <!-- Main -->
+  <div class="main">
+    <!-- Dahsboard -->
+    <div class="dashboard">
+      <div class="dashboard__row">
+        <div class="dashboard__board">
+          <div class="dashboard__board--stockAmount">
+            <span>234,520,300株</span>
+          </div>
+        </div>
+        <div class="dashboard__board">
+          <div class="dashboard__board--shareholdersAmount">
+            <span>株主等　47名</span>
+          </div>
+        </div>
+        <div class="dashboard__board">
+          <div class="dashboard__board--stockPrice">
+            <span>株価　￥1,365</span>
+          </div>
+        </div>
+      </div>
+      <div class="dashboard__row">
+        <div class="dashboard__board">
+          <div class="dashboard__board--stockShare">
+            <canvas id="stock_share" height="240"></canvas>
+          </div>
+        </div>
+        <div class="dashboard__board">
+          <div class="dashboard__board--mainshareholders">
+            <ul>
+              <li>柿本人麻呂（代表取締役）<span>42.64%</span></li>
+              <li>松尾芭蕉（取締役）<span>19.19%</span></li>
+              <li>YJ1号投資事業組合<span>12.79%</span></li>
+              <li>折口信夫（社外取締役）<span>10.66%</span></li>
+              <li>その他<span>14.72%</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="dashboard__board">
+          <div class="dashboard__board--shareholdersTransition">
+            <canvas id="stock_transition" height="240"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- shareholders -->
+    <div class="shareholders">
+      <table class="shareholders__table">
+        <thead>
+        <tr class="shareholders__heading">
+          <th class="shareholders__heading-icon">icon</th>
+          <th class="shareholders__heading-name">name</th>
+          <th class="shareholders__heading-stockAmount">Amount</th>
+          <th class="shareholders__heading-stockShare">Share</th>
+        </tr>
+        </thead>
+        <tbody class="shareholders__table-Body">
+        <tr>
+          <td class="shareholders__icon"><i class="fab fa-alipay fa-2x"></i></td>
+          <td class="shareholders__name">柿本人麻呂（代表取締役）</td>
+          <td class="shareholders__stockAmount">100,000,000 株</td>
+          <td class="shareholders__stockShare">42.64 %</td>
+        </tr>
+        <tr>
+          <td class="shareholders__icon"><i class="fas fa-atom fa-2x"></i></td>
+          <td class="shareholders__name">松尾芭蕉（取締役）</td>
+          <td class="shareholders__stockAmount">45,000,000 株</td>
+          <td class="shareholders__stockShare">19.19 %</td>
+        </tr>
+        <tr>
+          <td class="shareholders__icon"><i class="fas fa-bible fa-2x"></i></td>
+          <td class="shareholders__name">YJ1号投資事業組合</td>
+          <td class="shareholders__stockAmount">30,000,000 株</td>
+          <td class="shareholders__stockShare">12.79 %</td>
+        </tr>
+        <tr>
+          <td class="shareholders__icon"><i class="fab fa-apple fa-2x"></i></td>
+          <td class="shareholders__name">折口信夫（社外取締役）</td>
+          <td class="shareholders__stockAmount">25,000,000 株</td>
+          <td class="shareholders__stockShare">10.66 %</td>
+        </tr>
+        <tr>
+          <td class="shareholders__icon"><i class="fab fa-canadian-maple-leaf fa-2x"></i></td>
+          <td class="shareholders__name">三井住友海上キャピタル</td>
+          <td class="shareholders__stockAmount">7,500,000 株</td>
+          <td class="shareholders__stockShare">3.20 %</td>
+        </tr>
+        <tr>
+          <td class="shareholders__icon"><i class="fas fa-robot fa-2x"></i></td>
+          <td class="shareholders__name">サイバーエージェント</td>
+          <td class="shareholders__stockAmount">3,500,000 株</td>
+          <td class="shareholders__stockShare">1.49 %</td>
+        </tr>
+        <tr>
+          <td class="shareholders__icon"><i class="fas fa-rocket fa-2x"></i><span></span></td>
+          <td class="shareholders__name">伊藤忠商事株式会社</td>
+          <td class="shareholders__stockAmount">3,200,000 株</td>
+          <td class="shareholders__stockShare">1.36 %</td>
+        </tr>
+        <tr>
+          <td class="shareholders__icon"><i class="fas fa-star fa-2x"></i><span></span></td>
+          <td class="shareholders__name">住友商事株式会社</td>
+          <td class="shareholders__stockAmount">3,200,000 株</td>
+          <td class="shareholders__stockShare">1.36 %</td>
+        </tr>
+        <tr>
+          <td class="shareholders__icon"><i class="fas fa-moon fa-2x"></i><span></span></td>
+          <td class="shareholders__name">三菱商事株式会社</td>
+          <td class="shareholders__stockAmount">2,000,000 株</td>
+          <td class="shareholders__stockShare">0.85 %</td>
+        </tr>
+        <tr>
+          <td class="shareholders__icon"><i class="fas fa-jedi fa-2x"></i><span></span></td>
+          <td class="shareholders__name">ストックオプション</td>
+          <td class="shareholders__stockAmount">15,120,300 個</td>
+          <td class="shareholders__stockShare">6.45 %</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- footer -->
+  <div class="footer">
+    <div class="footer__logo">CapNavi</div>
+    <div class="footer__list">
+    <ul class="footer__list-menu">
+      <li>サービスについて</li>
+      <li>会社概要</li>
+      <li>お問い合わせ</li>
+    </ul>
+    </div>
+  </div>
+  <script>
+    var stockShare = document.getElementById('stock_share').getContext('2d');
+    var My = new Chart(stockShare, {
+      type: 'doughnut',
+      data: {
+        labels: ['柿本', '松尾', 'YJ', '折口', '三井住友', 'CA', 'その他'],
+        datasets: [{
+          label: 'doughnut',
+          data: [42, 19, 13, 11, 3, 2, 10],
+          backgroundColor: [
+            "#2ecc71",
+            "#3498db",
+            "#fa4563",
+            "#9b59b6",
+            "#f1c40f",
+            "#e74c3c",
+            "#95a5a6"]
+        },]
+      },
+      options: {
+        legend: {
+          display: false
+        }
+      }
+    });
+
+    var stockTransition = document.getElementById('stock_transition').getContext('2d');
+    var MyChart = new Chart(stockTransition, {
+        type: 'bar',
+        data: {
+          labels: ['創業', 'シード', 'シリーズA', 'シリーズB'],
+          datasets: [
+            {
+              label: '柿本',
+              data: [70, 55, 50, 42.64],
+              backgroundColor: [
+                "#2ecc71",
+                "#2ecc71",
+                "#2ecc71",
+                "#2ecc71",
+                "#2ecc71"
+              ],
+              stack: 1,
+              fill: "origin"
+            },
+            {
+              label: '松尾',
+              data: [30, 24, 22, 19.19],
+              backgroundColor: [
+                "#3498db",
+                "#3498db",
+                "#3498db",
+                "#3498db",
+                "#3498db"],
+              stack: 1,
+              fill: "-1"
+            },
+            {
+              label: 'YJ',
+              data: [0, 18, 17, 12.79],
+              backgroundColor: [
+                "#fa4563",
+                "#fa4563",
+                "#fa4563",
+                "#fa4563",
+                "#fa4563"],
+              stack: 1,
+              fill: "-1"
+            },
+            {
+              label: '折口',
+              data: [0, 0, 0, 10.66],
+              backgroundColor: [
+                "#9b59b6",
+                "#9b59b6",
+                "#9b59b6",
+                "#9b59b6",
+                "#9b59b6"],
+              stack: 1,
+              fill: "-1"
+            },
+            {
+              label: 'その他',
+              data: [0, 3, 11, 14.72],
+              backgroundColor: [
+                "#95a5a6"
+              ],
+              stack: 1,
+              fill: "-1"
+            },
+          ]
+        },
+        options: {
+          legend: {
+            display: false
+          },
+          stacked: true
+        },
+        plugins: {
+          filler: {
+            propagate: true
+          }
+        }
+      }
+    );
+  </script>
+</body>
+</html>
+
