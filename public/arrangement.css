@@ -5,19 +5,23 @@ body {
 li {
   list-style: none; }
 
+.wrapper {
+  display: flex; }
+
+.left .right {
+  flex: 1; }
+
 /*
  * ヘッダー
  */
 .header {
-  height: 72px;
-  width: 100%;
-  display: flex;
+  height: 100%;
+  width: 200px;
   background-color: #EDF2F7;
   border-bottom: solid 1px #E2E8F0; }
   .header__left {
     width: 120px;
-    margin: 0 12px;
-    padding: 16px 0;
+    padding: 24px 16px;
     display: flex; }
   .header__Logo--image {
     width: 40px;
@@ -26,17 +30,14 @@ li {
     padding-left: 8px;
     font-size: 30px; }
   .header__menu {
-    width: 480px;
-    margin-left: 36px;
-    display: flex;
+    padding: 0 16px;
     text-decoration: none; }
     .header__menu li {
-      padding: 32px 8px; }
+      padding: 12px 0;
+      font-size: 18px; }
   .header__right {
     width: 100px;
-    margin-left: auto;
-    margin-right: 20px;
-    padding: 16px 0;
+    padding: 16px 8px;
     display: flex; }
   .header__icon--Avatar {
     width: 40px;
