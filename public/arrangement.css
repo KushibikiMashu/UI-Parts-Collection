@@ -1,7 +1,4 @@
 @charset "UTF-8";
-body {
-  margin: 0; }
-
 li {
   list-style: none; }
 
@@ -20,7 +17,6 @@ li {
   background-color: #EDF2F7;
   border-bottom: solid 1px #E2E8F0; }
   .header__left {
-    width: 120px;
     padding: 24px 16px;
     display: flex; }
   .header__Logo--image {
@@ -36,7 +32,6 @@ li {
       padding: 12px 0;
       font-size: 18px; }
   .header__right {
-    width: 100px;
     padding: 16px 8px;
     display: flex; }
   .header__icon--Avatar {
