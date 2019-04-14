@@ -59,6 +59,7 @@ li {
   padding-bottom: 40px;
   border-radius: 12px; }
   .dashboard__row {
+    padding: 40px 0;
     display: flex;
     justify-content: center; }
   .dashboard__board, .dashboard__board--stockAmount, .dashboard__board--shareholdersAmount, .dashboard__board--stockPrice, .dashboard__board--stockShare, .dashboard__board--mainshareholders, .dashboard__board--shareholdersTransition {
@@ -66,14 +67,20 @@ li {
     min-width: 16rem;
     height: 12rem;
     max-height: 12rem;
-    margin: 8px 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #FFFFFF;
-    font-weight: bold;
+    margin-right: 16px;
+    border: 2px solid #EDF2F7;
     border-radius: 4px;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+    .dashboard__board--item, .dashboard__board--stockAmount, .dashboard__board--shareholdersAmount, .dashboard__board--stockPrice, .dashboard__board--stockShare, .dashboard__board--mainshareholders, .dashboard__board--shareholdersTransition {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #FFFFFF;
+      font-weight: bold; }
+    .dashboard__board--header {
+      padding: 8px;
+      background-color: #EDF2F7;
+      text-align: left; }
     .dashboard__board--stockAmount {
       font-size: 32px;
       background-color: #23c6f8; }

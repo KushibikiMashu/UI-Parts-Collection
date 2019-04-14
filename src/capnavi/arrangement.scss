@@ -6,7 +6,7 @@ li {
   display: flex;
 }
 
-.left .right{
+.left .right {
   flex: 1;
 }
 
@@ -71,7 +71,6 @@ li {
   margin: 10px 12px;
 }
 
-
 /*
  * ダッシュボード
  */
@@ -81,6 +80,7 @@ li {
   border-radius: 12px;
 
   &__row {
+    padding: 40px 0;
     display: flex;
     justify-content: center;
   }
@@ -90,24 +90,36 @@ li {
     min-width: 16rem;
     height: 12rem;
     max-height: 12rem;
-    margin: 8px 8px;
+    margin-right: 16px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #FFFFFF;
-    font-weight: bold;
+    border: 2px solid #EDF2F7;
     border-radius: 4px;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05);
 
+    &--item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #FFFFFF;
+      font-weight: bold;
+    }
+
+    &--header {
+      padding: 8px;
+      background-color: #EDF2F7;
+      text-align: left;
+    }
+
     &--stockAmount {
       @extend .dashboard__board;
+      @extend .dashboard__board--item;
       font-size: 32px;
       background-color: #23c6f8;
     }
 
     &--shareholdersAmount {
       @extend .dashboard__board;
+      @extend .dashboard__board--item;
       font-size: 32px;
       background-color: #70eeba;
 
@@ -115,6 +127,7 @@ li {
 
     &--stockPrice {
       @extend .dashboard__board;
+      @extend .dashboard__board--item;
       font-size: 32px;
       background-color: #6f69e7;
 
@@ -122,20 +135,24 @@ li {
 
     &--stockShare {
       @extend .dashboard__board;
+      @extend .dashboard__board--item;
     }
 
     &--mainshareholders {
       @extend .dashboard__board;
+      @extend .dashboard__board--item;
       flex-direction: column;
       font-size: 16px;
       background-color: #fa4563;
     }
 
-    &--mainshareholders span{
+    &--mainshareholders span {
       float: right;
     }
+
     &--shareholdersTransition {
       @extend .dashboard__board;
+      @extend .dashboard__board--item;
     }
   }
 }
@@ -154,47 +171,48 @@ li {
     background-color: #F7FAFC;
     border: 1px solid #CBD5E0;
 
-    &-Body{}
+    &-Body {
+    }
   }
 
   &__heading {
     border: 1px solid #CBD5E0;
 
-    &-icon{
+    &-icon {
       width: 50px;
       padding-left: 16px;
     }
 
-    &-name{
+    &-name {
       width: 200px;
       text-align: center;
     }
 
-    &-stockAmount{
+    &-stockAmount {
       width: 120px;
       text-align: right;
     }
 
-    &-stockShare{
+    &-stockShare {
       width: 100px;
       padding-right: 28px;
       text-align: right;
     }
   }
 
-  &__icon{
+  &__icon {
     padding-left: 16px;
     text-align: center;
   }
 
-  &__name{
+  &__name {
   }
 
-  &__stockAmount{
+  &__stockAmount {
     text-align: right;
   }
 
-  &__stockShare{
+  &__stockShare {
     padding-right: 16px;
     text-align: right;
   }
@@ -209,13 +227,13 @@ li {
   display: flex;
   background-color: #E2E8F0;
 
-  &__logo{
+  &__logo {
     padding-left: 24px;
     font-size: 32px;
     line-height: 80px;
   }
 
-  &__list{
+  &__list {
     width: 100%;
     padding-top: 4px;
     padding-right: 48px;
