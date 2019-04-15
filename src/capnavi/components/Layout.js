@@ -6,6 +6,7 @@ import Main from './Main'
 const styles = {
   root: {
     display: 'flex',
+    backgroundColor: '#F7FAFC',
   },
   sideber: {
     height: '100vh',
@@ -14,9 +15,6 @@ const styles = {
   },
   main: {
     flex: 1,
-    // display: 'flex',
-    // justifyContent: 'center',
-    // alignItems: 'center',
   },
   word: {
     fontSize: 80,

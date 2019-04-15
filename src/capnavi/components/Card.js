@@ -18,7 +18,6 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#23C6F8',
   },
   boardInfo : {
     color: '#FFFFFF',
@@ -27,19 +26,18 @@ const styles = {
 
 function SimpleCard(props) {
   const { classes, element } = props;
-  classes.area.backgroundColor = element.bgcolor
 
   return (
     <Card className={classes.card}>
       <CardContent>
-        <Typography className={classes.title} color="textSecondary" gutterBottom>
-          {element.title}発行済株式数
+        <Typography className={classes.title} color="default" gutterBottom>
+          {element.title}
         </Typography>
       </CardContent>
       <CardActionArea>
-        <div className={classes.area}>
-          <Typography className={classes.boardInfo} gutterBottom variant="h4" component="h2">
-            {element.info}234,520,300株
+        <div className={classes.area} style={{backgroundColor: element.bgcolor}}>
+          <Typography className={classes.boardInfo} gutterBottom variant={element.size} component="h2">
+            {element.info}
           </Typography>
         </div>
       </CardActionArea>
