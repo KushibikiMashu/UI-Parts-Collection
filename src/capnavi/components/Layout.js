@@ -30,7 +30,6 @@ function Layout(props) {
         <ButtonAppBar class={{margin: 0, width: 200}}/>
       </div>
       <div className={classes.main}>
-        {/*<p className={classes.word}>Coming Soon...</p>*/}
         <Main/>
       </div>
     </div>

@@ -1,7 +1,9 @@
 import React from 'react'
 import { withStyles } from "@material-ui/core";
 import Card from './Card'
+import ChartCard from './ChartCard'
 import StockShareChart from './StockShareChart'
+import StockTransitionChart from './StockTransitionChart'
 
 const styles = {
   dashboard: {
@@ -63,10 +65,13 @@ function Dashboard(props) {
       </div>
       <div className={classes.row}>
         <div className={classes.board}>
-          <StockShareChart/>
+          <ChartCard title={"株主比率"} chart={<StockShareChart/>}/>
         </div>
         <div className={classes.board}>
           <Card element={elements.mainShareholders}/>
+        </div>
+        <div className={classes.board}>
+          <ChartCard title={"株主推移"} chart={<StockTransitionChart/>}/>
         </div>
       </div>
     </div>
