@@ -11,6 +11,7 @@ const styles = {
     width: 275,
   },
   title: {
+    marginBottom: 0,
     fontSize: 14,
   },
   area: {
@@ -30,14 +31,14 @@ function SimpleCard(props) {
   return (
     <Card className={classes.card}>
       <CardContent>
-        <Typography className={classes.title} color="default" gutterBottom>
+        <Typography className={classes.title} color="textSecondary" gutterBottom>
           {element.title}
         </Typography>
       </CardContent>
       <CardActionArea>
         <div className={classes.area} style={{backgroundColor: element.bgcolor}}>
           <Typography className={classes.boardInfo} gutterBottom variant={element.size} component="h2">
-            {element.info}
+            {element.info.map(n => <span key={n}>{n}<br/></span>)}
           </Typography>
         </div>
       </CardActionArea>

@@ -8,11 +8,13 @@ const styles = {
     padding: 40,
   },
   row: {
+    paddingTop: 12,
+    paddingBottom: 12,
     display: 'flex',
   },
   board: {
-    marginLeft: 8,
-    marginRight: 8,
+    marginLeft: 12,
+    marginRight: 12,
   }
 }
 
@@ -20,30 +22,26 @@ const elements = {
   stock: {
     bgcolor: '#23C6F8',
     title: '発行済株式数（株）',
-    info: '234,520',
+    info: ['234,520'],
     size: 'h2',
   },
   shareholders: {
     bgcolor: '#70eeba',
     title: '株主数（名）',
-    info: '76',
+    info: ['76'],
     size: 'h2',
   },
   stockPrice: {
-    bgcolor: '#6f69e7',
+    bgcolor: '#4FD1C5',
     title: '株価（円）',
-    info: '1,365',
+    info: ['1,365'],
     size: 'h2',
   },
   mainShareholders: {
-    bgcolor: '#6f69e7',
-    title: '株価（円）',
-    info: `柿本人麻呂（代表取締役)
-松尾芭蕉（取締役)
-YJ1号投資事業組合)
-折口信夫（社外取締役)
-その他`,
-    size: 'h5',
+    bgcolor: '#7F9CF5',
+    title: '主要株主',
+    info: ["柿本人麻呂（代表取締役)", "松尾芭蕉（取締役)", "YJ1号投資事業組合)", "折口信夫（社外取締役)", "その他"],
+    size: 'h6',
   },
 }
 
