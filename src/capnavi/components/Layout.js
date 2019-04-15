@@ -1,6 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import ButtonAppBar from './AppBar'
+import Main from './Main'
 
 const styles = {
   root: {
@@ -13,9 +14,9 @@ const styles = {
   },
   main: {
     flex: 1,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
+    // display: 'flex',
+    // justifyContent: 'center',
+    // alignItems: 'center',
   },
   word: {
     fontSize: 80,
@@ -31,7 +32,8 @@ function Layout(props) {
         <ButtonAppBar class={{margin: 0, width: 200}}/>
       </div>
       <div className={classes.main}>
-        <p className={classes.word}>Coming Soon...</p>
+        {/*<p className={classes.word}>Coming Soon...</p>*/}
+        <Main/>
       </div>
     </div>
   )
