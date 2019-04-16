@@ -2,6 +2,7 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import ButtonAppBar from './AppBar'
 import Main from './Main'
+import PrimarySearchAppBar from "./PrimarySearchAppBar";
 
 const styles = {
   root: {
@@ -30,6 +31,7 @@ function Layout(props) {
         <ButtonAppBar class={{margin: 0, width: 200}}/>
       </div>
       <div className={classes.main}>
+        <PrimarySearchAppBar />
         <Main/>
       </div>
     </div>

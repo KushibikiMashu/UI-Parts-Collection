@@ -48,7 +48,7 @@ function ListItemComposition(props) {
   const {classes} = props;
 
   return (
-    <Paper>
+    <Paper style={{borderRadius: 0, boxShadow: 'none', borderRight: '1px solid #e2e8f0'}}>
       <MenuList>
         <Typography variant="h6" color="inherit" className={classes.site}>
           <img src={logo} alt="Logo" width={40} height={40}/>
