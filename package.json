@@ -47,6 +47,7 @@
     "moment": "^2.24.0",
     "prettier": "1.16.4",
     "react-chartjs-2": "^2.7.6",
+    "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",
     "tailwindcss": "^1.0.0-beta.4"
   }
