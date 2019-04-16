@@ -6,11 +6,12 @@ import PrimarySearchAppBar from "./PrimarySearchAppBar";
 
 const styles = {
   root: {
+    height: '100%',
     display: 'flex',
     backgroundColor: '#F7FAFC',
   },
   sideber: {
-    height: '100vh',
+    height: '100%',
     width: 200,
     margin: 0,
   },

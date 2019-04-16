@@ -8,7 +8,7 @@ import StockTransitionChart from './StockTransitionChart'
 const styles = {
   dashboard: {
     width: '100%',
-    padding: 40,
+    paddingTop: 20,
   },
   row: {
     paddingTop: 12,
