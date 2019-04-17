@@ -1,0 +1,25 @@
+{
+  "messages": [
+    {
+      "userName": "self",
+      "body": "test",
+      "time": "午後 17:52",
+      "created_at": "2019-04-17T08:52:54.323Z",
+      "id": "99496b3c-b187-440e-b127-6f0e21f786e3"
+    },
+    {
+      "userName": "self",
+      "body": "add",
+      "time": "午後 17:53",
+      "created_at": "2019-04-17T08:53:40.574Z",
+      "id": "e0140054-9356-4d6f-9790-255b29fc4bea"
+    },
+    {
+      "userName": "self",
+      "body": "tuika",
+      "time": "午後 17:54",
+      "created_at": "2019-04-17T08:54:25.737Z",
+      "id": "9f16a927-5615-4f24-b71e-b11ba7943ebb"
+    }
+  ]
+}

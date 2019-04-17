@@ -1,0 +1,18 @@
+{
+  "messages": [
+    {
+      "userName": "self",
+      "body": "Send Message",
+      "time": "午後 23:58",
+      "created_at": "2019-04-10T14:58:51.068Z",
+      "id": "c9251563-cf0a-444f-a05f-2dcaf1f89d51"
+    },
+    {
+      "userName": "self",
+      "body": "ちゃんと追加されてる！",
+      "time": "午後 23:58",
+      "created_at": "2019-04-10T14:58:55.616Z",
+      "id": "b338280e-3237-4a48-907c-b37579937b57"
+    }
+  ]
+}
