@@ -14,6 +14,8 @@ import Divider from '@material-ui/core/Divider';
 import Typography from '@material-ui/core/Typography';
 import logo from '../logo_final.svg'
 
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
 const styles = theme => ({
   menuItem: {
     paddingLeft: 12,
@@ -49,14 +51,24 @@ function ListItemComposition(props) {
 
   return (
     <Paper style={{borderRadius: 0, boxShadow: 'none', borderRight: '1px solid #e2e8f0'}}>
+      <Link to="/">
+        <MenuList>
+          <Typography variant="h6" color="inherit" className={classes.site}>
+            <img src={logo} alt="Logo" width={40} height={40}/>
+            <span className={classes.siteName}>CapNavi</span>
+          </Typography>
+          <Divider/>
+        </MenuList>
+      </Link>
       <MenuList>
-        <Typography variant="h6" color="inherit" className={classes.site}>
-          <img src={logo} alt="Logo" width={40} height={40}/>
-          <span className={classes.siteName}>CapNavi</span>
-        </Typography>
-        <Divider/>
-      </MenuList>
-      <MenuList>
+        <Link to="/shareholders">
+          <MenuItem className={classes.menuItem}>
+            <ListItemIcon className={classes.icon}>
+              <SendIcon/>
+            </ListItemIcon>
+            <ListItemText classes={{primary: classes.primary}} inset primary="株主リスト"/>
+          </MenuItem>
+        </Link>
         <MenuItem className={classes.menuItem}>
           <ListItemIcon className={classes.icon}>
             <SendIcon/>

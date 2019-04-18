@@ -3,7 +3,9 @@ import { withStyles } from '@material-ui/core/styles';
 import Dashboard from './Dashboard'
 import Table from './Table'
 
-const styles={
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
+const styles = {
   root: {
     marginLeft: 40,
     marginRight: 40,
@@ -17,9 +19,9 @@ function Main(props) {
   const {classes} = props
   return (
     <div className={classes.root}>
-    <Dashboard/>
-    <Table/>
-  </div>
+      <Route exact path="/" component={Dashboard}/>
+      <Route exact path="/shareholders" component={Table}/>
+    </div>
   )
 }
 

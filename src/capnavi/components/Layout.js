@@ -4,6 +4,8 @@ import ButtonAppBar from './AppBar'
 import Main from './Main'
 import PrimarySearchAppBar from "./PrimarySearchAppBar";
 
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
 const styles = {
   root: {
     height: '100%',
@@ -27,15 +29,17 @@ const styles = {
 function Layout(props) {
   const {classes} = props;
   return (
-    <div className={classes.root}>
-      <div className={classes.sideber}>
-        <ButtonAppBar class={{margin: 0, width: 200}}/>
+    <Router>
+      <div className={classes.root}>
+        <div className={classes.sideber}>
+          <ButtonAppBar class={{margin: 0, width: 200}}/>
+        </div>
+        <div className={classes.main}>
+          <PrimarySearchAppBar/>
+          <Main/>
+        </div>
       </div>
-      <div className={classes.main}>
-        <PrimarySearchAppBar />
-        <Main/>
-      </div>
-    </div>
+    </Router>
   )
 }
 
