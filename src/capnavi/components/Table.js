@@ -20,17 +20,22 @@ const styles = theme => ({
 });
 
 let id = 0;
-function createData(name, calories, fat, carbs, protein) {
+function createData(avatar, name, amount, share) {
   id += 1;
-  return { id, name, calories, fat, carbs, protein };
+  return { id, avatar, name, amount, share };
 }
 
 const rows = [
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-  createData('Cupcake', 305, 3.7, 67, 4.3),
-  createData('Gingerbread', 356, 16.0, 49, 3.9),
+  createData('icon', '柿本人麻呂（代表取締役）',	'100,000,000 株'	,'42.64 %'),
+  createData('icon', '松尾芭蕉（取締役）',	'45,000,000 株'	,'19.19 %'),
+  createData('icon', 'YJ1号投資事業組合',	'30,000,000 株'	,'12.79 %'),
+  createData('icon', '折口信夫（社外取締役）',	'25,000,000 株'	,'10.66 %'),
+  createData('icon', '三井住友海上キャピタル',	'7,500,000 株'	,'3.20 %'),
+  createData('icon', 'サイバーエージェント',	'3,500,000 株'	,'1.49 %'),
+  createData('icon', '伊藤忠商事株式会社',	'3,200,000 株'	,'1.36 %'),
+  createData('icon', '住友商事株式会社',	'3,200,000 株'	,'1.36 %'),
+  createData('icon', '三菱商事株式会社',	'2,000,000 株'	,'0.85 %'),
+  createData('icon', 'ストックオプション',	'15,120,300 個'	,'6.45 %'),
 ];
 
 function SimpleTable(props) {
@@ -41,23 +46,21 @@ function SimpleTable(props) {
       <Table className={classes.table}>
         <TableHead>
           <TableRow>
-            <TableCell>Dessert (100g serving)</TableCell>
-            <TableCell align="right">Calories</TableCell>
-            <TableCell align="right">Fat (g)</TableCell>
-            <TableCell align="right">Carbs (g)</TableCell>
-            <TableCell align="right">Protein (g)</TableCell>
+            <TableCell>Avatar</TableCell>
+            <TableCell align="right">Name</TableCell>
+            <TableCell align="right">Amount</TableCell>
+            <TableCell align="right">Share</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map(row => (
             <TableRow key={row.id}>
               <TableCell component="th" scope="row">
-                {row.name}
+                {row.avatar}
               </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.fat}</TableCell>
-              <TableCell align="right">{row.carbs}</TableCell>
-              <TableCell align="right">{row.protein}</TableCell>
+              <TableCell align="right">{row.name}</TableCell>
+              <TableCell align="right">{row.amount}</TableCell>
+              <TableCell align="right">{row.share}</TableCell>
             </TableRow>
           ))}
         </TableBody>
