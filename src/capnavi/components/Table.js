@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
@@ -7,6 +7,7 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import Modal from './Modal'
 
 const styles = theme => ({
   root: {
@@ -49,9 +50,19 @@ const rows = [
 
 function SimpleTable(props) {
   const { classes } = props;
+  const [open, toggle] = useState(false);
+
+  function handleOpen(){
+    toggle(true)
+  }
+
+  function handleClose(){
+    toggle(false)
+  }
 
   return (
     <Paper className={classes.root}>
+      <Modal/>
       <Table className={classes.table}>
         <TableHead>
           <TableRow>
@@ -63,7 +74,7 @@ function SimpleTable(props) {
         </TableHead>
         <TableBody>
           {rows.map(row => (
-            <TableRow key={row.id}>
+            <TableRow key={row.id} onClick={() => handleOpen()}>
               <TableCell component="th" scope="row">
                 {<i className={row.avatar}/>}
               </TableCell>
