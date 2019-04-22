@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -7,7 +6,8 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import Modal from './Modal'
+import SimpleModal from './Modal';
+import ShareholderDetail from './ShareholderDetail'
 
 const styles = theme => ({
   root: {
@@ -62,7 +62,6 @@ function SimpleTable(props) {
 
   return (
     <Paper className={classes.root}>
-      <Modal/>
       <Table className={classes.table}>
         <TableHead>
           <TableRow>
@@ -85,12 +84,14 @@ function SimpleTable(props) {
           ))}
         </TableBody>
       </Table>
+      <SimpleModal
+        open={open}
+        handleClose={handleClose}
+      >
+        <ShareholderDetail/>
+      </SimpleModal>
     </Paper>
   );
 }
-
-SimpleTable.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
 
 export default withStyles(styles)(SimpleTable);
