@@ -1,5 +1,5 @@
 import React from 'react'
-import { Doughnut } from 'react-chartjs-2';
+import { Line } from 'react-chartjs-2';
 
 const chartData = {
   labels: ['柿本', '松尾', 'YJ', '折口', '三井住友', 'CA', 'その他'],
@@ -22,6 +22,6 @@ const chartOptions = {
   }
 }
 
-export default function StockShareChart() {
-  return <Doughnut data={chartData} options={chartOptions} width={275} height={400}/>
+export default function StockProfitChart() {
+  return <Line data={chartData} options={chartOptions} width={275} height={200}/>
 }

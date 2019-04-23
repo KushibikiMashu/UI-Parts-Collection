@@ -9,6 +9,7 @@ import TableRow from "@material-ui/core/TableRow/TableRow";
 import TableCell from "@material-ui/core/TableCell/TableCell";
 import TableBody from "@material-ui/core/TableBody/TableBody";
 import Button from '@material-ui/core/Button';
+import StockProfitChart from './StockProfitChart'
 
 // function rand() {
 //   return Math.round(Math.random() * 20) - 10;
@@ -30,7 +31,7 @@ function getModalStyle() {
 const styles = theme => ({
   paper: {
     position: 'absolute',
-    width: theme.spacing.unit * 75,
+    width: theme.spacing.unit * 80,
     backgroundColor: '#e2e8f0',
     boxShadow: theme.shadows[5],
     padding: theme.spacing.unit * 4,
@@ -83,10 +84,15 @@ const styles = theme => ({
   },
   right: {
     marginTop: 4,
-    marginLeft: 24,
-    width: '46%',
+    marginLeft: 16,
+    width: '54%',
   },
-  chart:{},
+  stockProfitChart:{
+    height: 330,
+    paddingTop: 8,
+    display: 'flex',
+    alignItems: 'center',
+  },
   stock:{
     marginTop: 8,
     paddingTop: 8,
@@ -168,8 +174,8 @@ function ShareholderDetail(props) {
         </div>
       </div>
       <div className={classes.right}>
-        <Paper>
-          <div>aaa</div>
+        <Paper className={classes.stockProfitChart}>
+          <StockProfitChart/>
         </Paper>
         <Paper className={classes.stock}>
           <div>
