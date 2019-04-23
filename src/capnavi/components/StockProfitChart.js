@@ -2,23 +2,27 @@ import React from 'react'
 import { Line } from 'react-chartjs-2';
 
 const chartData = {
-  labels: ['柿本', '松尾', 'YJ', '折口', '三井住友', 'CA', 'その他'],
-  datasets: [{
-    data: [42, 19, 13, 11, 3, 2, 10],
-    backgroundColor: [
-      "#2ecc71",
-      "#3498db",
-      "#fa4563",
-      "#9b59b6",
-      "#f1c40f",
-      "#e74c3c",
-      "#95a5a6"]
-  }]
+  labels: ['2017/3', '2017/9', '2018/3', '2017/9', '2018/3', '2018/9', '2019/3'],
+  datasets: [
+    {
+      label: '取得価額',
+      data: [0, 200, 500, 1000, 1000, 1000, 1000],
+      backgroundColor: "#63B3ED",
+      fill: true,
+    },
+    {
+      label: 'バリュエーション',
+      data: [500, 1000, 1500, 2000, 3000, 4000, 5000],
+      backgroundColor: "#f1c40f",
+      fill: true,
+    },
+  ]
 }
 
 const chartOptions = {
   legend: {
-    display: false
+    display: true,
+    position: 'bottom',
   }
 }
 

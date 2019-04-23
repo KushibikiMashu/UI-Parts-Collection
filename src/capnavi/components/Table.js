@@ -85,7 +85,7 @@ function SimpleTable(props) {
         </TableBody>
       </Table>
       <SimpleModal
-        open={open}
+        open={!open}
         handleClose={handleClose}
       >
         <ShareholderDetail/>
