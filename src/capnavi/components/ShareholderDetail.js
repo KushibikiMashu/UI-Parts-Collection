@@ -38,8 +38,27 @@ const styles = theme => ({
   },
   left: {
     width: '46%',
+    // fontColor: 'gray',
   },
-  profile: {},
+    avatarArea: {
+      width: '40%',
+      display: 'flex',
+      alignItems: 'center',
+    },
+    avatar: {
+      fontSize: 100,
+    },
+  profilePaper: {
+    marginTop: 4,
+    marginBottom: 12,
+    paddingTop: 8,
+    paddingBottom: 8,
+    display: 'flex',
+  },
+  tablePaper:{
+    marginTop: 4,
+    marginBottom: 12,
+  },
   table: {
     width: 200,
   },
@@ -53,7 +72,7 @@ const styles = theme => ({
     paddingRight: 0,
   },
   buttons: {
-    marginTop: 6,
+    marginTop: 4,
     display: 'flex',
     justifyContent: 'center',
   },
@@ -82,22 +101,26 @@ function ShareholderDetail(props) {
   return (
     <div style={getModalStyle()} className={classes.paper}>
       <div className={classes.left}>
-        <Paper>
-          <AccountCircle/>
-          <Typography>
-            柿本人麻呂
-          </Typography>
-          <div>
-            <p>保有株数 1,500株</p>
-            <p>株式比率 7.2%</p>
+        <Paper className={classes.profilePaper}>
+          <div className={classes.avatarArea}>
+          <AccountCircle fontSize={'large'} className={classes.avatar}/>
           </div>
           <div>
-            <p>住所: 東京都港区南麻布1-2-1</p>
-            <p>職業: 個人投資家</p>
-            <p>役職: 社外取締役</p>
+            <Typography style={{fontSize: 24}}>
+              柿本人麻呂
+            </Typography>
+            <div style={{paddingTop: 8, paddingBottom: 8 }}>
+              <Typography>保有株数 1,500株</Typography>
+              <Typography>株式比率 7.2%</Typography>
+            </div>
+            <div>
+              <Typography style={{fontSize: 12}}>住所: 東京都港区南麻布1-2-1</Typography>
+              <Typography style={{fontSize: 12}}>職業: 個人投資家</Typography>
+              <Typography style={{fontSize: 12}}>役職: 社外取締役</Typography>
+            </div>
           </div>
         </Paper>
-        <Paper>
+        <Paper className={classes.tablePaper}>
           <Table className={classes.table}>
             <TableHead>
               <TableRow>
@@ -128,21 +151,21 @@ function ShareholderDetail(props) {
           </Button>
         </div>
       </div>
-      <Paper>
-        <div>aaa</div>
-      </Paper>
-      <Paper>
-        <div>
-          <p>見込み売却益4,699,500円</p>
-          <p>投資利回り461.5%</p>
-          <p>生産分配額300,182円</p>
-        </div>
-        <div>
-          <p>4,699,500円</p>
-          <p>461.5%</p>
-          <p>300,182円</p>
-        </div>
-      </Paper>
+      {/*<Paper>*/}
+      {/*<div>aaa</div>*/}
+      {/*</Paper>*/}
+      {/*<Paper>*/}
+      {/*<div>*/}
+      {/*<p>見込み売却益4,699,500円</p>*/}
+      {/*<p>投資利回り461.5%</p>*/}
+      {/*<p>生産分配額300,182円</p>*/}
+      {/*</div>*/}
+      {/*<div>*/}
+      {/*<p>4,699,500円</p>*/}
+      {/*<p>461.5%</p>*/}
+      {/*<p>300,182円</p>*/}
+      {/*</div>*/}
+      {/*</Paper>*/}
     </div>
   )
 }
