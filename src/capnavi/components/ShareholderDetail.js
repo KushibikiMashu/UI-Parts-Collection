@@ -35,19 +35,20 @@ const styles = theme => ({
     boxShadow: theme.shadows[5],
     padding: theme.spacing.unit * 4,
     outline: 'none',
+    display: 'flex',
   },
   left: {
     width: '46%',
-    // fontColor: 'gray',
   },
-    avatarArea: {
-      width: '40%',
-      display: 'flex',
-      alignItems: 'center',
-    },
-    avatar: {
-      fontSize: 100,
-    },
+  avatarArea: {
+    width: '40%',
+    display: 'flex',
+    alignItems: 'center',
+    color: 'grey',
+  },
+  avatar: {
+    fontSize: 100,
+  },
   profilePaper: {
     marginTop: 4,
     marginBottom: 12,
@@ -55,7 +56,7 @@ const styles = theme => ({
     paddingBottom: 8,
     display: 'flex',
   },
-  tablePaper:{
+  tablePaper: {
     marginTop: 4,
     marginBottom: 12,
   },
@@ -79,6 +80,21 @@ const styles = theme => ({
   button: {
     margin: 4,
     fontSize: 12,
+  },
+  right: {
+    marginTop: 4,
+    marginLeft: 24,
+    width: '46%',
+  },
+  chart:{},
+  stock:{
+    marginTop: 8,
+    paddingTop: 8,
+    paddingBottom: 8,
+    paddingLeft: 16,
+    paddingRight: 16,
+    display: 'flex',
+    color: '#e2e8f0',
   }
 });
 
@@ -103,13 +119,13 @@ function ShareholderDetail(props) {
       <div className={classes.left}>
         <Paper className={classes.profilePaper}>
           <div className={classes.avatarArea}>
-          <AccountCircle fontSize={'large'} className={classes.avatar}/>
+            <AccountCircle fontSize={'large'} className={classes.avatar}/>
           </div>
           <div>
             <Typography style={{fontSize: 24}}>
               柿本人麻呂
             </Typography>
-            <div style={{paddingTop: 8, paddingBottom: 8 }}>
+            <div style={{paddingTop: 8, paddingBottom: 8}}>
               <Typography>保有株数 1,500株</Typography>
               <Typography>株式比率 7.2%</Typography>
             </div>
@@ -151,21 +167,23 @@ function ShareholderDetail(props) {
           </Button>
         </div>
       </div>
-      {/*<Paper>*/}
-      {/*<div>aaa</div>*/}
-      {/*</Paper>*/}
-      {/*<Paper>*/}
-      {/*<div>*/}
-      {/*<p>見込み売却益4,699,500円</p>*/}
-      {/*<p>投資利回り461.5%</p>*/}
-      {/*<p>生産分配額300,182円</p>*/}
-      {/*</div>*/}
-      {/*<div>*/}
-      {/*<p>4,699,500円</p>*/}
-      {/*<p>461.5%</p>*/}
-      {/*<p>300,182円</p>*/}
-      {/*</div>*/}
-      {/*</Paper>*/}
+      <div className={classes.right}>
+        <Paper>
+          <div>aaa</div>
+        </Paper>
+        <Paper className={classes.stock}>
+          <div>
+            <Typography style={{fontSize: 14}}>見込み売却益</Typography>
+            <Typography style={{fontSize: 14}}>投資利回り</Typography>
+            <Typography style={{fontSize: 14}}>生産分配額</Typography>
+          </div>
+          <div style={{marginLeft: 'auto'}}>
+            <Typography style={{fontSize: 14}}>4,699,500円</Typography>
+            <Typography style={{fontSize: 14}}>461.5%</Typography>
+            <Typography style={{fontSize: 14}}>300,182円</Typography>
+          </div>
+        </Paper>
+      </div>
     </div>
   )
 }
