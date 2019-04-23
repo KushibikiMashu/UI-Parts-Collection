@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -18,6 +18,11 @@ const styles = theme => ({
   table: {
     minWidth: 540,
   },
+  row: {
+    '&:hover': {
+      cursor: 'pointer',
+    }
+  },
   avatar: {
     width: 28,
   },
@@ -30,33 +35,34 @@ const styles = theme => ({
 });
 
 let id = 0;
+
 function createData(avatar, name, amount, share) {
   id += 1;
-  return { id, avatar, name, amount, share };
+  return {id, avatar, name, amount, share};
 }
 
 const rows = [
-  createData('fab fa-alipay fa-2x', '柿本人麻呂（代表取締役）',	'100,000,000 株'	,'42.64 %'),
-  createData('fas fa-atom fa-2x', '松尾芭蕉（取締役）',	'45,000,000 株'	,'19.19 %'),
-  createData('fas fa-bible fa-2x', 'YJ1号投資事業組合',	'30,000,000 株'	,'12.79 %'),
-  createData('fab fa-apple fa-2x', '折口信夫（社外取締役）',	'25,000,000 株'	,'10.66 %'),
-  createData('fab fa-canadian-maple-leaf fa-2x', '三井住友海上キャピタル',	'7,500,000 株'	,'3.20 %'),
-  createData('fas fa-robot fa-2x', 'サイバーエージェント',	'3,500,000 株'	,'1.49 %'),
-  createData('fas fa-rocket fa-2x', '伊藤忠商事株式会社',	'3,200,000 株'	,'1.36 %'),
-  createData('fas fa-star fa-2x', '住友商事株式会社',	'3,200,000 株'	,'1.36 %'),
-  createData('fas fa-moon fa-2x', '三菱商事株式会社',	'2,000,000 株'	,'0.85 %'),
-  createData('fas fa-jedi fa-2x', 'ストックオプション',	'15,120,300 個'	,'6.45 %'),
+  createData('fab fa-alipay fa-2x', '柿本人麻呂（代表取締役）', '100,000,000 株', '42.64 %'),
+  createData('fas fa-atom fa-2x', '松尾芭蕉（取締役）', '45,000,000 株', '19.19 %'),
+  createData('fas fa-bible fa-2x', 'YJ1号投資事業組合', '30,000,000 株', '12.79 %'),
+  createData('fab fa-apple fa-2x', '折口信夫（社外取締役）', '25,000,000 株', '10.66 %'),
+  createData('fab fa-canadian-maple-leaf fa-2x', '三井住友海上キャピタル', '7,500,000 株', '3.20 %'),
+  createData('fas fa-robot fa-2x', 'サイバーエージェント', '3,500,000 株', '1.49 %'),
+  createData('fas fa-rocket fa-2x', '伊藤忠商事株式会社', '3,200,000 株', '1.36 %'),
+  createData('fas fa-star fa-2x', '住友商事株式会社', '3,200,000 株', '1.36 %'),
+  createData('fas fa-moon fa-2x', '三菱商事株式会社', '2,000,000 株', '0.85 %'),
+  createData('fas fa-jedi fa-2x', 'ストックオプション', '15,120,300 個', '6.45 %'),
 ];
 
 function SimpleTable(props) {
-  const { classes } = props;
+  const {classes} = props;
   const [open, toggle] = useState(false);
 
-  function handleOpen(){
+  function handleOpen() {
     toggle(true)
   }
 
-  function handleClose(){
+  function handleClose() {
     toggle(false)
   }
 
@@ -73,7 +79,7 @@ function SimpleTable(props) {
         </TableHead>
         <TableBody>
           {rows.map(row => (
-            <TableRow key={row.id} onClick={() => handleOpen()}>
+            <TableRow key={row.id} onClick={() => handleOpen()} className={classes.row}>
               <TableCell component="th" scope="row">
                 {<i className={row.avatar}/>}
               </TableCell>
@@ -85,7 +91,7 @@ function SimpleTable(props) {
         </TableBody>
       </Table>
       <SimpleModal
-        open={!open}
+        open={open}
         handleClose={handleClose}
       >
         <ShareholderDetail/>

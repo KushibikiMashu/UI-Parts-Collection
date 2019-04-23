@@ -81,6 +81,8 @@ const styles = theme => ({
   button: {
     margin: 4,
     fontSize: 12,
+    color: '#FFFFFF',
+    backgroundColor: '#63B3ED',
   },
   right: {
     marginTop: 4,
@@ -165,10 +167,10 @@ function ShareholderDetail(props) {
           </Table>
         </Paper>
         <div className={classes.buttons}>
-          <Button variant="contained" color="primary" className={classes.button}>
+          <Button variant="contained" className={classes.button}>
             投資契約書を見る
           </Button>
-          <Button variant="contained" color="primary" className={classes.button}>
+          <Button variant="contained" className={classes.button}>
             メッセージを送る
           </Button>
         </div>

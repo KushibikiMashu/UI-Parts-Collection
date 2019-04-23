@@ -23,5 +23,5 @@ const chartOptions = {
 }
 
 export default function StockShareChart() {
-  return <Doughnut data={chartData} options={chartOptions} width={275} height={400}/>
+  return <Doughnut data={chartData} options={chartOptions} width={275} height={200}/>
 }

@@ -8,11 +8,17 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import DraftsIcon from '@material-ui/icons/Drafts';
+import ViewListIcon from '@material-ui/icons/ViewList';
 import SendIcon from '@material-ui/icons/Send';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import Divider from '@material-ui/core/Divider';
 import Typography from '@material-ui/core/Typography';
 import logo from '../logo_final.svg'
+
+import TableChartIcon from '@material-ui/icons/TableChart';
+import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
+import FiberNewIcon from '@material-ui/icons/FiberNew';
+import SettingsIcon from '@material-ui/icons/Settings';
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
@@ -64,32 +70,32 @@ function ListItemComposition(props) {
         <Link to="/shareholders">
           <MenuItem className={classes.menuItem}>
             <ListItemIcon className={classes.icon}>
-              <SendIcon/>
+              <ViewListIcon/>
             </ListItemIcon>
             <ListItemText classes={{primary: classes.primary}} inset primary="株主リスト"/>
           </MenuItem>
         </Link>
         <MenuItem className={classes.menuItem}>
           <ListItemIcon className={classes.icon}>
-            <SendIcon/>
+            <TableChartIcon/>
           </ListItemIcon>
           <ListItemText classes={{primary: classes.primary}} inset primary="資本政策表"/>
         </MenuItem>
         <MenuItem className={classes.menuItem}>
           <ListItemIcon className={classes.icon}>
-            <DraftsIcon/>
+            <ChatBubbleOutlineIcon/>
           </ListItemIcon>
           <ListItemText classes={{primary: classes.primary}} inset primary="取締役会"/>
         </MenuItem>
         <MenuItem className={classes.menuItem}>
           <ListItemIcon className={classes.icon}>
-            <InboxIcon/>
+            <FiberNewIcon/>
           </ListItemIcon>
           <ListItemText classes={{primary: classes.primary}} inset primary="新株予約権"/>
         </MenuItem>
         <MenuItem className={classes.menuItem}>
           <ListItemIcon className={classes.icon}>
-            <PlayArrowIcon/>
+            <SettingsIcon/>
           </ListItemIcon>
           <ListItemText classes={{primary: classes.primary}} inset primary="各種設定"/>
         </MenuItem>
