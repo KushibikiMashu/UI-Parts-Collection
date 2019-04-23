@@ -36,6 +36,31 @@ const styles = theme => ({
     padding: theme.spacing.unit * 4,
     outline: 'none',
   },
+  left: {
+    width: '46%',
+  },
+  profile: {},
+  table: {
+    width: 200,
+  },
+  tableBody: {
+    width: '100%',
+  },
+  cell: {
+    paddingTop: 0,
+    paddingBottom: 0,
+    paddingLeft: 16,
+    paddingRight: 0,
+  },
+  buttons: {
+    marginTop: 6,
+    display: 'flex',
+    justifyContent: 'center',
+  },
+  button: {
+    margin: 4,
+    fontSize: 12,
+  }
 });
 
 let id = 0;
@@ -56,7 +81,7 @@ function ShareholderDetail(props) {
 
   return (
     <div style={getModalStyle()} className={classes.paper}>
-      <div>
+      <div className={classes.left}>
         <Paper>
           <AccountCircle/>
           <Typography>
@@ -76,25 +101,25 @@ function ShareholderDetail(props) {
           <Table className={classes.table}>
             <TableHead>
               <TableRow>
-                <TableCell>取得日</TableCell>
-                <TableCell align="right">取得株数</TableCell>
-                <TableCell align="right">単価</TableCell>
-                <TableCell align="right">取得価額</TableCell>
+                <TableCell className={classes.cell}>取得日</TableCell>
+                <TableCell className={classes.cell} align="right">取得株数</TableCell>
+                <TableCell className={classes.cell} align="right">単価</TableCell>
+                <TableCell className={classes.cell} align="right">取得価額</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
               {rows.map(row => (
                 <TableRow key={row.id}>
-                  <TableCell component="th" scope="row">{row.datetime}</TableCell>
-                  <TableCell align="right">{row.amount}</TableCell>
-                  <TableCell align="right">{row.price}</TableCell>
-                  <TableCell align="right">{row.getPrice}</TableCell>
+                  <TableCell className={classes.cell} component="th" scope="row">{row.datetime}</TableCell>
+                  <TableCell className={classes.cell} align="right">{row.amount}</TableCell>
+                  <TableCell className={classes.cell} align="right">{row.price}</TableCell>
+                  <TableCell className={classes.cell} align="right">{row.getPrice}</TableCell>
                 </TableRow>
               ))}
             </TableBody>
           </Table>
         </Paper>
-        <div>
+        <div className={classes.buttons}>
           <Button variant="contained" color="primary" className={classes.button}>
             投資契約書を見る
           </Button>
@@ -104,10 +129,13 @@ function ShareholderDetail(props) {
         </div>
       </div>
       <Paper>
+        <div>aaa</div>
+      </Paper>
+      <Paper>
         <div>
-        <p>見込み売却益4,699,500円</p>
-        <p>投資利回り461.5%</p>
-        <p>生産分配額300,182円</p>
+          <p>見込み売却益4,699,500円</p>
+          <p>投資利回り461.5%</p>
+          <p>生産分配額300,182円</p>
         </div>
         <div>
           <p>4,699,500円</p>
