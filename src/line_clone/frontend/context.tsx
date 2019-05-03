@@ -1,5 +1,11 @@
-import { createContext } from "react";
+import { createContext } from 'react'
+import { IState, IAction } from './types'
 
-const MessageContext = createContext([] as any)
+interface IContext {
+  state: IState
+  dispatch: React.Dispatch<IAction>
+}
+
+const MessageContext = createContext<IContext>({} as any)
 
 export { MessageContext }
