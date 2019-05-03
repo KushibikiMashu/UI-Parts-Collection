@@ -2,7 +2,7 @@ import * as React from "react"
 import MyMessage from './MyMessage'
 import OtherMessage from './OtherMessage'
 import { messageItems } from '../data'
-import { MessageContext } from "../Context"
+import { MessageContext } from "../context"
 import axios from 'axios'
 
 export default function MessageList() {

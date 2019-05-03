@@ -3,7 +3,7 @@ import './Room.scss'
 import MessageList from './MessageList'
 import InputField from './InputField'
 import { reducer } from "../reducer"
-import { MessageContext } from '../Context'
+import { MessageContext } from '../context'
 
 export default function Room() {
   const [state, dispatch] = React.useReducer(reducer, {messages: []})

@@ -1,6 +1,6 @@
 import * as React from "react"
 import './InputField.scss'
-import { MessageContext } from '../Context'
+import { MessageContext } from '../context'
 import axios from "axios";
 import moment from 'moment'
 
