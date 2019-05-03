@@ -12,7 +12,7 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "commonjs",
+    "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -21,7 +21,13 @@
     "removeComments": true
   },
   "include": [
-    "./src/**/*",
-    "stories",
+    "./src/**/*.js",
+    "./src/**/*.jsx",
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "stories/**/*.js",
+    "stories/**/*.jsx",
+    "stories/**/*.ts",
+    "stories/**/*.tsx",
   ]
 }

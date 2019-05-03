@@ -13,12 +13,9 @@ export default function MessageList() {
       .then(res => {
         dispatch({
           type: 'RECEIVE_MESSAGES',
-          payload: res.data,
+          payload: res.data || [],
         })
-      }).catch(err => {
-      const {status, statusText} = err.response;
-      console.log(`Error! HTTP Status: ${status} ${statusText}`);
-    });
+      })
   }, [])
 
   const allMessages = messageItems.concat(state.messages).map(

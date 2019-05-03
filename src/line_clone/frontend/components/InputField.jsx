@@ -31,11 +31,8 @@ export default function InputField() {
     }).then(res => {
       dispatch({
         type: 'ADD_MESSAGE',
-        payload: res.data
+        payload: res.data || []
       })
-    }).catch(err => {
-      const {status, statusText} = err.response;
-      console.log(`Error! HTTP Status: ${status} ${statusText}`);
     });
 
     setText('')
